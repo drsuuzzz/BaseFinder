@@ -1,0 +1,257 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf270
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural
+
+\f0\b\fs24 \cf0 What is BaseFinder?\
+
+\b0 It's a tool for processing trace data for DNA sequencing, or for analysis of SHAPE data.  It was written primarily by Morgan Giddings and Jessica Severin at the University of Wisconsin-Madison, in Lloyd Smith's lab and was known as BaseFinder at that time.  The program was started in 1991 by Morgan, and continued refinement through 1997.  More recently, it has been maintained by Morgan Giddings at the University of North Carolina at Chapel Hill.  giddings@unc.edu.\
+\
+
+\b How to Install?
+\b0 \
+Prior to installation, it is best to manually delete the previously installed BaseFinder.  Next, Drag and Drop the BaseFinder.app file into the Applications folder.  If you have a release prior to 6.1.11, please remove all files from the directory /Library/BaseFinder/Resources.  Otherwise, you'll see some error messages when starting BaseFinder.  Enjoy!\
+\
+
+\b How to Build?
+\b0 \
+Open the file BaseFinder/BaseFinder.xcodeproj in Xcode and build.  Intel Mac? Not to worry, BaseFinder is set up to build as a universal binary and supports OSx 10.4 and 10.5. Have fun! \
+\
+\
+
+\b Other contributors:
+\b0 \
+Mike Koehrsen\
+Suzy Vasa\
+Nicolas Guex\
+
+\b \
+\
+HISTORY\
+\
+BaseFinder Release Notes\
+\
+
+\b0 Version 6.2.11\
+-Add new target ShapeFinder to xcodeproj\
+-new ShapeFinder.nib and new InfoPanel_SF.nib\
+-new sficon.icns and ShapeFinder release notes\
+-ShapeFinder precompiled header file for #define SHAPEFINDER, necessary for loading the correct info panel\
+-GUI issue with Leopard (10.5) items in lists, such as Script Inspector, etc. were not highlighting when selected.\
+\
+Version 6.2.10\
+-major update to the Help book\
+-support for FASTA files in the Align and Integrate tool\
+-fixed bug with multple channel selection in the Signal Decay Tool\
+-fixed bug in Align and Integrate tool processing of only a section of the sequence file\
+\
+Version 6.2.9\
+-disabled sequence alignment algorithm;  tool Align and Integrate revert back to best matches algorithm\
+-Removed Smooth option from Align and Integrate tool\
+-Fix crash when reading .shape file\
+-Fixed UI spacing issue with Deconvolution tool\
+\
+Version 6.2.8\
+-Fixed crash in mobility shift tools\
+-New Mobility Shift: Cubic tool\
+-Fixed issue of interactions between Manual Delete and Align and Integrate tools\
+-Fixed issue with extra nucletides in sequence alignment row produced by Align and Integrate tools\
+\
+Version 6.2.7\
+-Fixed problem with extra marker peak at beginning of size standard for TRFLP tool\
+-Cutoff thresholds in TRFLP tool are now persistant\
+-New sequence alignment algorithm in tool Align and Integrate\
+-Move sequence related methods from Align and Integrate to the Sequence object\
+-Make rescale value persistant in Signal Decay tool.  Also, reduced default scaling to 1000.\
+-Added support for 'U' to Base object\
+-shape file now supports offset in base list for display \
+-Information in Fit panel was not being updated during an integration\
+\
+Version 6.2.6\
+-Update to Signal Decay Tool, all peaks are used in algorithm minus outliers outside 3*IQR. \
+-Added rescaling value to signal decay tool.\
+-Local alignment algorithm implemented for Align and Integrate.  Inactive until testing complete, but framework in place\
+\
+Version 6.2.5\
+-Issue with TRFLP algorithm crashing when first two size standard peaks are missing.\
+\
+Version 6.2.4\
+-Fixed TRFLP problem identifying Marker Ladder peaks\
+-Fixed TRFLP problem with additional side peak in the intense peak\
+\
+Version 6.2.3\
+-ddNTP nucleotides can now be deleted by Align and integrate\
+-More strict on what is considered an outlier for Signal Decay tool--1.5IQR instead of 3*IQR\
+\
+Version 6.2.2\
+-Mobility Shift: Polynomial can now shift all 8 channels.\
+-New option for enable/disable hash line marking of base locations\
+-New low peak cutoff option added to Tool TRFLP\
+-Help book page for TRFLP tool\
+-Fix bug in Align and Integrate:  tool wasn't executing at Append.\
+-Fix bug in Signal Decay Correction tool.  Can't begin interative procedure with coefficients initialized to 0.\
+\
+Version 6.2.1\
+-Selected channel Manual Deletion now available, only possible with the "leave a space" option checked.  Otherwise, the range is deleted from all channels.\
+-BFNewTool framework was not used and so was removed from the project.\
+-Support for fitting first and last peaks in Align & Integrate is now available.\
+-Fix Replace problem if interactive tool is the first tool\
+-Fix error with parameter reset issues for interactive tools\
+-can drag and drop to open files in BaseFinder\
+-fixed memory leak with lots of files open\
+-fixed error when multiple files are selected and command-S is entered\
+-improvements to tool T-RFLP, annotation of peaks, primer peak clean up\
+-improvements to the Help Book\
+\
+Version 6.2.0:\
+-Align and Integrate is now classified as an interactive tool, allowing the REPLACE option to reuse the same cache.\
+-New tool for correcting signal decay is introduced--Signal Decay Correction\
+-Fixed crash for undefined colors in channels 5-8.\
+-Loaded files panel won't disappear anymore\
+-Sequence labels for Align and Integrate tool were not displayed in some situations\
+-More work done on background processing of Align and Integrate fitting.  Can fit more then one trace\
+-Sequence produced from Align and integrate reflects correct order of sequence when markers are displayed, i.e., reversed.\
+\
+Version 6.1.19:\
+-BigEndian conversion to native format was using NSSwapBigShortToHost which used unsigned 16 bit integers as input.  ABI \
+raw data is stored as signed 16 bit integers.  Negative numbers were converted to huge positive numbers. \
+Changed to EndianS16_BtoN.\
+-.dat and .seqd save as version were flipped\
+\
+Version 6.1.18:\
+-fix crash with standard marker implementation\
+-introduction of new Levenberg-Marquardt curve fitting algorithm\
+-introduction of Cubic spline algorithm for point interpolation\
+-Help Book now accessible through the BaseFinder Help menu\
+-Fix problem with losing input data in Align & Integrate\
+-Filter-Convolution should show only channels that were selected for filtering\
+-Fix crash in RNAfit when a peak area is 0\
+-Fine tuned algorithm for identifying peaks to add\
+\
+Version 6.1.17:\
+-fix crash in AsciiArchiver again\
+-framework for Align and Integrate background threads implemented--not enabled.\
+-new tool for T-RFLP\
+\
+Version 6.1.16:\
+-fix crash in AsciiArchiver--crash when loading certain files\
+-problem with empty base list when reading FSA files.\
+\
+Version 6.1.15:\
+-fix error with how buttons enabled for align and integrate\
+-change from CAGT to 1234 in Matrix tool and Mobility shift tools\
+-rnafit v0.82 now integrated\
+-fix problem with adding peaks.\
+-added new save option .shape\
+-peak squares somewhat transparent\
+-user selected y scale carries over to printing\
+-Under Display Options, Data Marker, user can select if the sequence postitions or trace data position will be shown.\
+\
+Version 6.1.14:\
+-integrated rnafit v0.81\
+-introduction of UI improvements and enhancements\
+-multiple files can now be loaded and analyzed using Align and Integrate tool without data conflicts between files\
+-fixed clipping of peak indications. However there are still problems with magnifications below 75%\
+-can now add ddNTP peaks\
+-can add reagent, background and ddNTP peaks by single click on main viewing window--no longer need to select the table column.\
+-smoothing option added in the setup panel\
+-smart channel selection added in the setup panel\
+-fixed crash in mobility shift tools\
+-fixed crash when reading extra long Sequence files\
+-when channels are reordered by the Align and Integrate tool, the color is reordered too.\
+-changed ordering of channels read from ABI files\
+-fixed errors in handling more then 4 channels in the Align and Integrate tool\
+\
+Version 6.1.13:\
+-Modifications to build settings to support intel Mac and universal binaries--10.4 on intel mac and 10.3 on power pc\
+-fix crash when printing\
+-For the tool Align and Integrate, smoothing is on by default\
+\
+Version 6.1.12:\
+-restructure of BaseFinder to build from one project with embedded frameworks\
+-support added for reading AB1 and FSA files\
+\
+Version 6.1.11sm:\
+-Same as version 6.1.11 but with RNAfit smoothing enabled.\
+\
+Version 6.1.11:\
+-Integration of RNAfit version 0.8, further improvements to peak width detection and peak placement\
+\
+Version 6.1.10:\
+-Integration of RNAfit version 0.71, improvements in peak finding and curve fitting\
+-RNAfit v 0.71 introduced a smoothing function to improve peak finding.  It is turned off in this release in order to enable further experimentation with Deconvolution Tool.\
+-Fix error during copy phase during build of bundle\
+\
+Version 6.1.9:\
+-Integration of RNAfit version 0.6\
+\
+Version 6.1.8:\
+-fix bug with reordering of trace channels by Align Tool\
+-add support in Align Tool to remove a ddNTP channel from analysis by the tool\
+\
+Version 6.1.7:\
+-Fix lock up bug when transitioning from Init to Modify in the Align Tool\
+-Added to Align Tool the ability to save the fitted data file and the integrated data file\
+\
+Version 6.1.6:\
+-Modification to draw ladder utilities.  Drawing of gaussians support for the tool Align and Integrate\
+-Align and Integrate tool will reorder channels based on user settings of location of +reagent, -reagent, etc.\
+\
+Version 6.1.5:\
+-New tool Align and Integrate which is the integration of RNAFit into BaseFinder\
+\
+Version 6.1.4:\
+-Fixed problem with the Mobility tools.  Mobility Polynomial and Mobility Nonlinear could read eachothers files which caused BaseFinder to crash since the class was incorrect for the tool.  \
+-Can now open and save .txt files\
+-BaseFinder supports opening a Beckman .txt file\
+\
+Version 6.1.3:\
+-Added new Scale Factor tool for scaling individual channels\
+-Fixed an issue with the Manual Deletion Tool.  It wasn't 0ing the channels for the leave space option.\
+-Various changes to support the new Xcode 2.1 version.\
+\
+Version 6.1.2:\
+- Fixed scale to go from 0 to 50x, rather than 100x.\
+- Fixed problem where when sliding traces (e.g. in mobility tools) the scale isn't correctly set\
+- Fixed problem where repeated use of mobility tools lost track of views...\
+\
+Version 6.1.1:\
+- Fixed bug with overlapping control of magnification\
+- Fixed reading of ESD files to correctly place channels\
+\
+Version 6.1:\
+- Save now accessed by cmd-s\
+- Save Current Lane As... was implemented to save an individual lane\
+- ESD format can now be opened\
+- A new scaling control has been added to perform live re-scaling of the vertical axis.  The reset button sets the scale back to 1.0.\
+- Various internal bug fixing\
+\
+Known bugs/issues\
+- BaseFinder cannot save in ESD format.  So, the first time the user tries to save an ESD file after opening, the save panel will come up, requiring the choice of a new format.\
+ \
+ 
+\b Version 4.0b1 11/29/00  - 
+\b0 This is the first public release for MacOS X Public Beta.  \
+\pard\tx1440\tx2880\tx4320\tx5760\tx7200\pardeftab720\ql\qnatural
+
+\b \cf0 Changes
+\b0 \
+\pard\tx480\tx1440\tx2880\tx4320\tx5760\tx7200\pardeftab720\ql\qnatural
+\cf0 	- Removed all uses of PS and DPS functions, and replaced with NSBezierPaths\
+        - Made changes to (hopefully) improve drawing speed of bases shown on traces.\
+        - Updated Icons for OSX\
+        - Fixed various bugs\
+        - Updated progress bar to use OSX style "barber pole"\
+\pard\tx480\tx1440\tx2880\tx4320\tx5760\tx7200\pardeftab720\ql\qnatural
+
+\b \cf0 Issues
+\b0 \
+	- See the GeneKit HISTORY file regarding questions about two of the files used there.\
+        - Printing has only had cursory testing, so may or may not work at present.\
+
+\b Known Bugs
+\b0 \
+	- Multiple bases can be selected in Bases panel.  This shouldn't be the case, but was necessary to work\
+         around an apparent bug in OSX/PB.\
+\
+}

@@ -1,0 +1,49 @@
+{
+    IBClasses =     (
+                {
+            CLASS = FirstResponder;
+            LANGUAGE = ObjC;
+            SUPERCLASS = NSObject;
+        },
+                {
+            ACTIONS =             {
+                applyToAll = id;
+                autosavePanelCancel = id;
+                autosavePanelOK = id;
+                changeExecutePosition = id;
+                doubleClickSelect = id;
+                getResourceList = id;
+                open = id;
+                rollback = id;
+                saveAs = id;
+                selectResource = id;
+                showParams = id;
+                switchAutoexecute = id;
+                switchAutosave = id;
+            };
+            CLASS = ScriptEditor;
+            LANGUAGE = ObjC;
+            OUTLETS =             {
+                autoexecuteSwitch = id;
+                autosavePanel = id;
+                autosavePopUp = id;
+                autosaveSwitch = id;
+                resourceLabelID = id;
+                resourceMenu = id;
+                resourceSourceID = id;
+                saveButtonID = id;
+                saveToRootID = id;
+                scriptPanel = id;
+                scriptSaveLabelID = id;
+                scrollView = id;
+            };
+            SUPERCLASS = NSObject;
+        },
+                {
+            CLASS = ScriptView;
+            LANGUAGE = ObjC;
+            SUPERCLASS = NSView;
+        }
+    );
+    IBVersion = 1;
+}

@@ -1,0 +1,29 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                doPageLayout = id; 
+                switchFileAsTitle = id; 
+                switchIncludeHeader = id; 
+                switchNumViews = id; 
+                switchPointMarkers = id; 
+                switchRangeDisplay = id; 
+                switchViewScale = id; 
+            }; 
+            CLASS = PrintingOptions; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                dataRangeID = id; 
+                fileAsTitleID = id; 
+                includeHeaderID = id; 
+                numViewsID = id; 
+                optionsView = id; 
+                pointMarkersID = id; 
+                viewScaleID = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

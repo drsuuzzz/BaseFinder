@@ -1,0 +1,69 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+	<title>Quick Start Guide</title>
+	<link href="../task_tbl_style.css" rel="stylesheet" media="all">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="bksrvc001"></a><a name="xicnsc"></a>
+<div id="mainbox" align="left" style="margin-top: 0px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr height="28">
+					<td width="3" height="28">&nbsp;</td>
+					<td valign="top" height="28">
+						<p><font face="Lucida Grande,Arial,sans-serif"><a href="../tocstart.html">BaseFinder Help</a></font></p>
+					</td>
+				</tr>
+			</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr align="left" valign="top">
+					<td valign="bottom" width="3"></td>
+					<td valign="bottom" width="120"><font id="topic" size="4" face="Lucida Grande,Arial,sans-serif"><b>Contents</b></font></td>
+					<td rowspan="3" valign="middle" width="24" background="../Images/vertline2.gif">&nbsp;</td>
+					<td rowspan="3" valign="middle" width="7"></td>
+					<td valign="bottom" width="32"><img src="../Images/basefinder.tiff" alt="BaseFinder icon" height="32" width="32"></td>
+					<td valign="bottom" width="7"></td>
+					<td valign="bottom"><font id="topic" size="4" face="Lucida Grande,Arial,sans-serif"><b>Quick Start Guide</b></font></td>
+				</tr>
+				<tr align="left" valign="top" height="18">
+					<td width="3" height="18">&nbsp;</td>
+					<td width="120" height="18">&nbsp;</td>
+					<td colspan="3" height="18">&nbsp;</td>
+				</tr>
+				<tr align="left" valign="top">
+					<td width="3">&nbsp;</td>
+					<td width="120">
+						<p><a href="about_bf.html"><font face="Lucida Grande,Arial,sans-serif">About BaseFinder</font></a></p>
+						<p><a href="QuickStart.html"><font color="#ff4500" face="Lucida Grande,Arial,sans-serif">Quick Start Guide</font></a></p>
+						<p><a href="menutoc.html"><font face="Lucida Grande,Arial,sans-serif">BaseFinder Menu</font></a></p>
+						<p><a href="windowtoc.html"><font face="Lucida Grande,Arial,sans-serif">BaseFinder Windows</font></a></p>
+						<!--<p><a href="scripts.html"><font face="Lucida Grande,Arial,sans-serif">BaseFinder Scripts</font></a></p>-->
+						<p><a href="Toolstoc.html"><font face="Lucida Grande,Arial,sans-serif">BaseFinder Tools</font></a></p>
+						<p><a href="Suggestion.html"><font face="Lucida Grande,Arial,sans-serif">Suggestions</a></font></p>
+            <p><font face="Lucida Grande,Arial,sans-serif"><a href="Acknowledge.html">Acknowledgements</a></font></p>
+					</td>
+					<td colspan="3"><p><font face="Lucida Grande,Arial,sans-serif">
+<p><font face="Lucida Grande,Arial,sans-serif">This is a guide to getting started with BaseFinder.  A walkthrough of loading data and selecting tools is presented.
+<p>1. <a href="Menus/LoadingData.html">Open</a> a data file.  Select tools to process the data by selecting them from the <a href="Windows/UsingTools.html">tool inspector</a>.</p>
+<p>2. If your trace looks like this,</p><img src="../Images/Raw.tiff">
+<p>the baseline has drifted and needs to be adjusted before using any of the tools.  To correct for baseline drift, use the <a href="Tools/BaseAdj.html">Fitted Baseline Adjust</a> tool. This is typically the first tool run. After running this tool the drift will be corrected and the data will look like this.  </p>
+<img src="../Images/badjusted.tiff">
+<p>3. The next step is to perform a color separation.  This is necessary due to spectral overlap of the fluorescent dyes used.  The <a href="Tools/Matrixing.html">Matrixing tool</a> adjusts the data set such that each channel represents an independent color source.  This tool may not be necessary if color separation/matrixing was performed by the DNA sequencing equipment.</p>
+<img src="../Images/matrixing.png">
+<p>4. Typically, the next step in the process is to smooth the data using one of the smoothing tools to remove jitter from the trace, <a href="Tools/Convolving.html">Filter-Convolution</a>, <a href="Tools/Deconvolve.html">Deconvolution</a>, or <a href="Tools/FFTPanel.html">Filter-FFT</a>.
+<p>5. With fluorescently labeled DNA sequencing, the different dye used in the separation alter the speed at which the attached DNA fragments travel through the capillary. cDNA fragments of the same length attached to different dyes will have different elution times and thus, channels will appear shifted from one another.  The shift can be corrected by using the <a href="Tools/MobShift.html">mobility shift</a> tools.  The following is an example to illustrate the concept using the Mobility Shift: Polynomial tool.</p>
+<img src="../Images/mobilex.png">
+<p>6. The signal tends to decay over long reads and BaseFinder provides tools to correct the signal decay.  If RNA is being analyzed, the tool <a href="Tools/signaldecay.html">Signal Decay Correction</a> should be executed at this point.  The <a href="Tools/signaldecay.html">Signal Decay Correction</a> tool corrects an observed exponential decay in the signal.  </p>
+<p> For analyzing DNA, the appropriate tool is <a href="Tools/Normalize.html">Normalization: Signal Average</a>.  This tool will average the signal onto a common scale for consistent peak intensities.</p>
+<p>7. For RNA analysis, individual channels can be rescaled with the <a href="Tools/Scale.html">Scale Factor Tool</a> to aid visualization of the trace to overcome issues with dye quantum yields.
+<p>8. At this point the data is ready for processing by tools such as <a href="Tools/BaseCalling.html">Base Calling</a> (DNA) and <a href="Tools/AlignInteg.html">Align and Integrate</a> (SHAPE).</font></p>
+<br>
+<br>
+	</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

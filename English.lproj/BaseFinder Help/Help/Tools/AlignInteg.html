@@ -1,0 +1,81 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1"></meta>
+	<title>Align and Integrate</title>
+	<link href="../../task_tbl_style.css" rel="stylesheet" media="all">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="bksrvc001"></a><a name="xicnsc"></a>
+<div id="mainbox" align="left">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td width="3" height="32">&nbsp;</td>
+	<td width="32" height="32"><img src="../../Images/basefinder.tiff" alt="BaseFinder Icon" height="32" width="32"></td>
+	<td width="8" height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Align and Integrate</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td><p><font face="Lucida Grande,Arial,sans-serif">
+<p><font face="Lucida Grande,Arial,sans-serif">The Align and Integrate tool is designed specifically for analysis of RNA hSHAPE data that consists of a (+) reagent, (-) reagent, and 1-2 dideoxy sequencing channels. The Align and Integrate tool aligns the channls with the known RNA sequence. User interaction is necessary to verify and correct the alignment. Next, once the alignment is correct and verified, Gaussian curves are fit to the peaks in the (+) and (-) reagent channels to quantify the peak area and thus measure the underlying flexibility of each nucleotide.  The tool is interactive, allowing repeated execution after adjustment of parameters by the user.  The end result is two text files consisting of (1) the (+) and (-) reagent channels as estimated from the Gaussian fitting and (2) tabulated per nucleotide peak intensities.</p>
+
+<p><b>PLEASE NOTE:</b> Prior to running this tool, the sequenced data must be <A HREF="BaseAdj.html"><FONT FACE="Lucida Grande,Arial,sans-serif">Baseline Adjusted</FONT></A>, <A HREF="BaseAdj.html">Matrixed</A>, Smoothed (<a href="Convolving.html">Filter-Convolution</a>, <a href="Deconvolve.html">Deconvolution</a>, or <a href="FFTPanel.html">Filter-FFT</a>) and <A HREF="MobShift.html">Mobility Shifted</a>.  The <a href="signaldecay.html">signal decay</a> should also be corrected.  In some situations you may also need to <a href="Scale.html">Scale</a> the (-) Reagent channel for background correction prior to using Align and Integrate.</p>
+
+
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Understanding the Output:</b></font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">Before describing the panels and options of the tool, a description of how the data is presented is given. The image below is an example output in the data view window.  One may see this after entering data in the <b>Setup</b> panel and then selecting <b>Append</b>. It is displayed using the <a href="../Windows/ViewAttributes.html">split channels</a> option set to <i>Split All</i>.  </p>
+<img src="../../Images/AlignData.tiff">
+
+<p>The first channel (blue) is the (+) reagent.  The second (green) is the (-) reagent.  The 3rd (black) and 4th (red) channels are dideoxy sequencing ladders.  The squares indicate identified peaks.  Blue and green peaks are aligned to black and red peaks. The lines linking the squares indicate peaks that have been identified as corresponding to the same cDNA length.  The bottom two lines of the data view window show the aligned sequence.  The last line is the known RNA sequence in the 3' to 5' direction.  The line above it represents the sequence detemined using the sequencing ladders. If there is an X in this line, this indicates that a significant peak was found in both dideoxy channels.  Clicking on a base will highight the position in the Base Sequence panel and vice versa.</p> 
+
+<p>If the alignment of the ladders is off, you can see this when the identified dideoxy ladders do not match with the aligned sequence.  This is apparent when , for instance, a G on top of an A is displayed instead of an A on top of an A.  The misalignment is typically a horizontal offset from the true sequence due to mis-identified, unidentified or noise peaks. To aid the alignment, the Align and Integrate tool provides the ability to add and delete peaks from the Modify panel which will help refine and shift the alignment of the trace to the RNA sequence.  </p>
+<p>In the (+) reagent, if there are any open squares--not completely gray, this is a peak identified in the reagent channel but not aligned with any other channels.  You may need to add a corresponding peak in the (-) reagent channel or you may need to delete the peak from the (+) reagent channel. The open squares in the dideoxy channels have a slightly different meaning.  It indicates that a peak was identified but it is not a part of the sequence.</p></font>
+
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Using the Tool</b></font></p>
+
+<p>The tool has three phases.  The first phase is the <b>Setup</b> phase where the tool is initialized and the alignment is first run.  The second phase, <b>Modify</b>, consists of adding or removing identified peaks to help with the alignment to the RNA sequence.  Lastly, the areas under the (+) and (-) reagent peaks are calculated in the <b>Fit</b> phase.  These phases correspond with panels within the tool and can be selected by the appropriate button. </p>
+<img src="../../Images/buttons.tiff">
+<p>Each execution of the tool from either Setup, Modify or the Fit panels causes a new alignment to be calculated. If a button is grayed-out, this indicates there are either errors in the setup phase or the setup has not been executed yet.  The tool will execute when the user selects the <b>Append</b> or <b>Replace</b> button at the bottom of the <a href="../Windows/UsingTools.html">Tool Inspector</a>.</p></font>
+
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Setup</b></font></p>
+<img src="../../Images/AlignSetup.tiff">
+<p><font face="Lucida Grande,Arial,sans-serif">The tool expects up to four channels of data.  The user to indicates which channel contains the (+) reagent, (-) reagent and ladders by the <b>Channel</b> drop down menus. The can also specify the ddNTP of the sequencing channel in <b>Agent</b> column. If one of the ladders is empty, select the empty option instead of a ddNTP.  The sensitivity specification is only applicable to the ladder.  It indicates a threshold for separating noise peaks from actual peaks in the dideoxy channels.  The default is 2.5.  By decreasing this number, more peaks are identified.  By increasing, fewer peaks are identified.</p>
+
+<p>The user specifies the <b>Trace Range</b> for alignment by manually entering the range or by dragging with the mouse within the data viewing window across the region of interest.  If these fields are left blank, then the whole trace is used. The algorithm makes an attempt to identify the primer peaks and full extension peaks.  However, it is not exact and thus it is best to always specify the region of interest between the primer and full extension peaks. </p> 
+
+<p>The <b>Smooth</b> and <b>Refine</b> options aid in peak finding. Data smoothing facilitates better peak finding.  As such, the <b>Smooth</b> option enables a sliding average smoothing algorithm. BaseFinder provides other more sophisticated smoothing tools which can make the peak finding more reliable.  These are <a href="Deconvolve.html">Deconvolution</a>, <a href="Convolving.html">Filter Convolution</a>, and <a href="FFTPanel.html">Filter FFT</a>.  Please experiment to find the best smoothing option for your RNA and sequencing equipment.</p>
+
+<p>The <b>Refine</b> option fine tunes peak placement after initial detection by "making" peaks in either the (+) reagent or (-) reagent channels if either channel has a peak not linked to the other. By default, the <b>Refine</b> option is enabled.</p>
+
+<p>The next set of options in the Setup panel pertain to the RNA sequence file used for the alignment process.  A number entered in the <b>Seq. Start Number</b> field will be used to start the sequence numbering in all output.  If left blank, then the sequence number will start at 1.  Of course, the sequence numbering is dependent upon where in the sequence the alignment is determined. <b>Seq. Range</b> can be used to specify a region of the sequence file to use for the alignment.  If left blank, then the whole file is used for the analysis.</p>
+
+<p>Lastly, the user must specify the file containing the RNA sequence, <b>Seq. File</b>.  This is an ASCII text file containing the RNA sequence in the 5' to 3' direction.  FASTA files are also supported.  The tool will ignore any white space (space characters, tabs, new lines, etc.) and non A, G, C, U, T or N characters. The RNA trace collected from the sequencing equipment will be in the 3' to 5' direction and shown this way in the data view window.  However, the tool will present its analysis from the 5' to 3' direction of the RNA sequence in all output files.</p></font>
+<p>Click the <b>Append</b> button to execute the tool.  The initial alignment will be displayed in the data view window.</p>
+
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Modify</b></font></p>
+<img src="../../Images/AlignModify.tiff">
+<p><font face="Lucida Grande,Arial,sans-serif">Misalignments occur frequently due to mis-identified peaks, unidentified peaks, poor peak alignment and noise in the trace.    </p>
+<p>The modify panel allows the user to add and remove peaks to further refine the alignment with the sequence. To switch between adding and deleting peaks, select either the delete or add button.  When deleting peaks, click on the square identifying the peak that is to be deleted in the data view window.  The peak position will be displayed in the modify panel.  When adding a peak, in the data view window, click on a position in the channel where you wish to add a peak.  The added peak position will be displayed in the modify panel.  After selecting the <b>Append</b> or <b>Replace</b> buttons, the data view window will display an updated realignment using the added or removed peaks.</font></p>
+
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Fit</b></font></p>
+<img src="../../Images/AlignFit.tiff">
+<p><font face="Lucida Grande,Arial,sans-serif">When satisfied with the alignment, select <b>Fit</b>.  Check the <b>Optimize</b> option to obtain a better fit. This option greatly increases the execution time while obtaining a more exact fit.  A 'barbor pole' will be displayed while the algorithm is calculating the peak areas.  The 'barbor pole' will be removed and the data view window will display the calculated Gaussians once the calculations are complete. The fit can take from 20 minutes to an hour depending on the length of the trace and processor speed. It is possible to analyze other trace files while a fit is ongoing.  Multiple fits can be done at the same time. But, beware, too many fits at a time can over-tax your computer. </p>
+<p>At the completion of the fit two files are output. The <b>Input versus Fit File:</b> is the calculated area under the fitted curve to the peaks as well as the background corrected areas.  The output is per nucleotide in tab delimited columns showing the area for the (+) reagent and (-) reagent channels.  The <b>Integrated Peaks File</b> will contain a tab-delimited text file with the input data vs fitted data for reagent and background to be used for plotting.  Click on the <b>File</b> button to select the location and name for each file.</font></p>
+<p><b>NOTE</b>: Due to the nature of hSHAPE chemistry, primer extension halts one nucleotide prior to the site of modification in the (+) reagent channel.  This one nucleotide offset is corrected in the Fit File and Peak file such that the quantified peak areas are associated with the correct nucleotide.</p>
+<p>Vasa SM, Guex N, Wilkinson KA, Weeks KM and Giddings MC, "ShapeFinder: A software system for high-throughput analysis of RNA structure", In preparation.</p>
+<br>
+<br>
+
+</font></p>
+	</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

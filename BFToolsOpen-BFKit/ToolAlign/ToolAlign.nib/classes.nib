@@ -1,0 +1,94 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dataList = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {apply = id; registerValue = id; reset = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                channelSelID = id; 
+                dataProcessor = id; 
+                inspectorView = id; 
+                toolMaster = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = IntegrateView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = NSDatePicker; LANGUAGE = ObjC; SUPERCLASS = NSControl; }, 
+        {CLASS = ToolAlign; LANGUAGE = ObjC; SUPERCLASS = GenericTool; }, 
+        {
+            ACTIONS = {
+                changeAddDelMessage = id; 
+                channelChange = id; 
+                channelChange2 = id; 
+                channelChange3 = id; 
+                channelChange4 = id; 
+                errorOkay = id; 
+                initData = id; 
+                integrateData = id; 
+                modifyAddDel = id; 
+                open = id; 
+                saveFit = id; 
+                savePeaks = id; 
+            }; 
+            CLASS = ToolAlignCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                NTLevel1ID = id; 
+                NTLevel2ID = id; 
+                accessoryView = NSBox; 
+                addDelID = id; 
+                addDelTextID = id; 
+                addDelView = id; 
+                blankView = id; 
+                channelsID = id; 
+                ddNTP1ID = id; 
+                ddNTP2ID = id; 
+                ddNTPChan1ID = id; 
+                ddNTPChan2ID = id; 
+                errorTextID = id; 
+                errorWinID = id; 
+                initView = id; 
+                integFile = id; 
+                integFitFile = id; 
+                integViewID = id; 
+                nreagentChanID = id; 
+                optimizeID = id; 
+                previousView = id; 
+                progressIndID = id; 
+                rangeFromID = id; 
+                rangeToID = id; 
+                reagentChanID = id; 
+                refineID = id; 
+                seqFromID = id; 
+                seqStartID = id; 
+                seqToID = id; 
+                sequenceText = id; 
+                statusTextID = id; 
+                tableView = id; 
+                viewButtons = id; 
+            }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }, 
+        {
+            ACTIONS = {adjustChannels = id; blankButton = id; callBases = id; showInspector = id; }; 
+            CLASS = ToolMaster; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {currentButton = id; currentSeqEdit = id; mainInspector = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

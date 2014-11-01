@@ -1,0 +1,24 @@
+{
+    IBClasses =     (
+                {
+            CLASS = FirstResponder;
+            LANGUAGE = ObjC;
+            SUPERCLASS = NSObject;
+        },
+                {
+            ACTIONS =             {
+                closeActiveFile = id;
+                selectFile = id;
+            };
+            CLASS = MultiFileManager;
+            LANGUAGE = ObjC;
+            OUTLETS =             {
+                matrixView = id;
+                panel = id;
+                scrollView = id;
+            };
+            SUPERCLASS = NSResponder;
+        }
+    );
+    IBVersion = 1;
+}

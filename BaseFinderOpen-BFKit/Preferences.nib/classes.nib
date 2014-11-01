@@ -1,0 +1,28 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                addResourcePath = id; 
+                changeDebugMode = id; 
+                deleteResourcePath = id; 
+                resetPanel = id; 
+                setParams = id; 
+                showPreferences = id; 
+                switchExpertMode = id; 
+            }; 
+            CLASS = PreferencesObject; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                bundleDirs = id; 
+                debugModeID = id; 
+                expertModeID = id; 
+                prefPanel = id; 
+                threadingID = id; 
+                toolLoadID = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

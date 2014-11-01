@@ -1,0 +1,25 @@
+{
+    IBClasses =     (
+                {
+            ACTIONS =             {
+                cellSelected = id;
+                showPanel = id;
+                test = id;
+            };
+            CLASS = BasesView;
+            LANGUAGE = ObjC;
+            OUTLETS =             {
+                aveConfidence = id;
+                panelID = id;
+                scrollView = id;
+            };
+            SUPERCLASS = NSObject;
+        },
+                {
+            CLASS = FirstResponder;
+            LANGUAGE = ObjC;
+            SUPERCLASS = NSObject;
+        }
+    );
+    IBVersion = 1;
+}

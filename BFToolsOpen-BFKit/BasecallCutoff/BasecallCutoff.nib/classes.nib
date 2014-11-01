@@ -1,0 +1,44 @@
+{
+    IBClasses = (
+        {
+            CLASS = BasecallCutoff; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {baseList = id; }; 
+            SUPERCLASS = GenericTool; 
+        }, 
+        {
+            CLASS = BasecallCutoffCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {cutoffID = id; dataWithBasesID = id; }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dataList = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {apply = id; registerValue = id; reset = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                channelSelID = id; 
+                dataProcessor = id; 
+                inspectorView = id; 
+                toolMaster = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = ToolManualDeletion; LANGUAGE = ObjC; SUPERCLASS = GenericTool; }, 
+        {
+            CLASS = ToolManualDeletionCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {leaveSpaceSwitch = id; rangeForm = id; }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }
+    ); 
+    IBVersion = 1; 
+}

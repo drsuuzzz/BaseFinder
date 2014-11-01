@@ -1,0 +1,26 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {controller = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {registerValue = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {channelSelID = id; dataProcessor = id; inspectorView = id; toolMaster = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = ToolFFT; LANGUAGE = ObjC; SUPERCLASS = GenericTool; }, 
+        {
+            CLASS = ToolFFTCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {chopValID = id; cutoffFormID = id; }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }
+    ); 
+    IBVersion = 1; 
+}

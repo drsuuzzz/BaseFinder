@@ -1,0 +1,51 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dataList = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {apply = id; registerValue = id; reset = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                channelSelID = id; 
+                dataProcessor = id; 
+                inspectorView = id; 
+                toolMaster = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = ToolManualDeletion; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {baseList = id; }; 
+            SUPERCLASS = GenericTool; 
+        }, 
+        {
+            ACTIONS = {switchRangeEnd = id; }; 
+            CLASS = ToolManualDeletionCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                altView = id; 
+                delChannelID = NSMatrix; 
+                endPointsFormCell = id; 
+                endView = id; 
+                leaveSpaceSwitch = id; 
+                rangeForm = id; 
+                rangeView = id; 
+            }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }
+    ); 
+    IBVersion = 1; 
+}

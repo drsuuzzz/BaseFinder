@@ -1,0 +1,25 @@
+"BasecallCutoff" = {ACTIONS = {}; OUTLETS = {baseList = id; }; SUPERCLASS = GenericTool; };
+"BasecallCutoffCtrl" = {
+    ACTIONS = {}; 
+    OUTLETS = {cutoffID = id; dataWithBasesID = id; }; 
+    SUPERCLASS = GenericToolCtrl; 
+};
+"FirstResponder" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSObject; };
+"GenericTool" = {ACTIONS = {}; OUTLETS = {dataList = id; }; SUPERCLASS = Object; };
+"GenericToolCtrl" = {
+    ACTIONS = {"apply:" = id; "registerValue:" = id; "reset:" = id; }; 
+    OUTLETS = {
+        applyButton = id; 
+        channelSelID = id; 
+        dataProcessor = id; 
+        inspectorView = id; 
+        toolMaster = id; 
+    }; 
+    SUPERCLASS = Object; 
+};
+"ToolManualDeletion" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = GenericTool; };
+"ToolManualDeletionCtrl" = {
+    ACTIONS = {}; 
+    OUTLETS = {leaveSpaceSwitch = id; rangeForm = id; }; 
+    SUPERCLASS = GenericToolCtrl; 
+};

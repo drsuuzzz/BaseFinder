@@ -1,0 +1,48 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {CLASS = GaussFitTool; LANGUAGE = ObjC; SUPERCLASS = GenericTool; }, 
+        {
+            ACTIONS = {clearPeakFile = id; fitGaussian = id; updateView = id; }; 
+            CLASS = GaussFitToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {gaussParamsID = id; myGaussView = id; }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }, 
+        {
+            CLASS = GaussianView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {myScrollView = id; scaleViewID = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dataList = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {apply = id; registerValue = id; reset = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                channelSelID = id; 
+                dataProcessor = id; 
+                inspectorView = id; 
+                resetButton = id; 
+                toolMaster = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = ScaleView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {
+            ACTIONS = {adjustChannels = id; blankButton = id; callBases = id; showInspector = id; }; 
+            CLASS = ToolMaster; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {currentButton = id; currentSeqEdit = id; mainInspector = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

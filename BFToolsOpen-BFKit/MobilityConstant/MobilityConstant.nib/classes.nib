@@ -1,0 +1,89 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {apply = id; registerValue = id; reset = id; }; 
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                cachedList = id; 
+                channelSelID = id; 
+                currentSeqEdit = id; 
+                inspectorView = id; 
+                toolMaster = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {registerValue = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {channelSelID = id; dataProcessor = id; inspectorView = NSBox; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = MobilityConstant; LANGUAGE = ObjC; SUPERCLASS = ResourceTool; }, 
+        {
+            ACTIONS = {selectShiftChannel = id; toggleShiftMode = id; }; 
+            CLASS = MobilityConstantCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {mobilityMatrix = id; shiftButton = id; shiftSelector = id; }; 
+            SUPERCLASS = ResourceToolCtrl; 
+        }, 
+        {
+            ACTIONS = {
+                changeLabel = id; 
+                newDoneSwitch = id; 
+                removeResource = id; 
+                replaceResource = id; 
+                reset = id; 
+                selectResource = id; 
+            }; 
+            CLASS = ResourceTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                newButton = id; 
+                removeButton = id; 
+                replaceButton = id; 
+                resetButton = id; 
+                resourceLabelID = id; 
+                resourceMenu = id; 
+                resourceMenuButton = id; 
+            }; 
+            SUPERCLASS = GenericTool; 
+        }, 
+        {
+            ACTIONS = {
+                changeLabel = id; 
+                getResourceList = id; 
+                newDoneSwitch = id; 
+                removeResource = id; 
+                replaceResource = id; 
+                selectResource = id; 
+            }; 
+            CLASS = ResourceToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                newButton = id; 
+                removeButton = id; 
+                resourceLabelID = id; 
+                resourceMenuButton = NSPopUpButton; 
+                resourceSourceID = id; 
+            }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }, 
+        {
+            ACTIONS = {apply = id; doShift = id; }; 
+            CLASS = ToolMobility; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                mobilityMatrix = id; 
+                resourceSourceID = id; 
+                shiftButton = id; 
+                shiftSelector = id; 
+            }; 
+            SUPERCLASS = ResourceTool; 
+        }
+    ); 
+    IBVersion = 1; 
+}

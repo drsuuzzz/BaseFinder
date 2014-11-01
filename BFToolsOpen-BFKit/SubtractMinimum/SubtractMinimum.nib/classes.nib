@@ -1,0 +1,28 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {controller = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {registerValue = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {channelSelID = id; dataProcessor = id; inspectorView = id; toolMaster = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = SubtractMinimum; LANGUAGE = ObjC; SUPERCLASS = GenericTool; }, 
+        {CLASS = SubtractMinimumCtrl; LANGUAGE = ObjC; SUPERCLASS = GenericToolCtrl; }, 
+        {
+            ACTIONS = {adjustChannels = id; blankButton = id; callBases = id; showInspector = id; }; 
+            CLASS = ToolMaster; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {currentButton = id; currentSeqEdit = id; mainInspector = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

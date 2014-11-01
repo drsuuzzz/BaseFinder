@@ -1,0 +1,41 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {controller = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {registerValue = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {channelSelID = id; dataProcessor = id; inspectorView = NSBox; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = ToolTRFLP; LANGUAGE = ObjC; SUPERCLASS = GenericTool; }, 
+        {
+            ACTIONS = {saveOutFile = id; }; 
+            CLASS = ToolTRFLPCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                chan1ID = NSComboBox; 
+                chan2ID = NSComboBox; 
+                chan3ID = NSComboBox; 
+                chan4ID = NSComboBox; 
+                outputFileID = NSTextField; 
+                primerID = NSButton; 
+                standardID = NSComboBox; 
+                thresholdID = NSForm; 
+            }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }
+    ); 
+    IBVersion = 1; 
+}

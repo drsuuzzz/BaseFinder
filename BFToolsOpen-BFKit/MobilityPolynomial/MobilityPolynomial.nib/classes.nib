@@ -1,0 +1,119 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dataList = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {apply = id; registerValue = id; reset = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                channelSelID = id; 
+                dataProcessor = id; 
+                inspectorView = id; 
+                resetButton = id; 
+                toolMaster = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                constantsChanged = id; 
+                newMethodOK = id; 
+                switchFunctionDisplay = id; 
+                switchSlideChannel = id; 
+            }; 
+            CLASS = MobilityPolynomialCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                accessoryView = NSBox; 
+                channelID = id; 
+                constID = id; 
+                displayView = id; 
+                newMethodID = id; 
+                newMethodView = id; 
+                slideChannelID = id; 
+                slidingModeView = id; 
+            }; 
+            SUPERCLASS = ResourceToolCtrl; 
+        }, 
+        {
+            CLASS = MobilityShift2; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {baseList = id; mobilityFunctionID = id; }; 
+            SUPERCLASS = ResourceTool; 
+        }, 
+        {
+            ACTIONS = {newMethodOK = id; switchFunctionDisplay = id; switchSlideChannel = id; }; 
+            CLASS = MobilityShift2Ctrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                accessoryView = id; 
+                channelID = id; 
+                constID = id; 
+                displayView = id; 
+                newMethodID = id; 
+                newMethodView = id; 
+                slideChannelID = id; 
+                slidingModeView = id; 
+            }; 
+            SUPERCLASS = ResourceToolCtrl; 
+        }, 
+        {
+            CLASS = MobilityShift3; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {myBaseList = id; }; 
+            SUPERCLASS = ResourceTool; 
+        }, 
+        {
+            ACTIONS = {
+                constantsChanged = id; 
+                newMethodOK = id; 
+                switchFunctionDisplay = id; 
+                switchSlideChannel = id; 
+            }; 
+            CLASS = MobilityShift3Ctrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                accessoryView = id; 
+                channelID = id; 
+                constID = id; 
+                displayView = id; 
+                newMethodID = id; 
+                newMethodView = id; 
+                slideChannelID = id; 
+                slidingModeView = id; 
+            }; 
+            SUPERCLASS = ResourceToolCtrl; 
+        }, 
+        {CLASS = ResourceTool; LANGUAGE = ObjC; SUPERCLASS = GenericTool; }, 
+        {
+            ACTIONS = {
+                changeLabel = id; 
+                getResourceList = id; 
+                newDoneSwitch = id; 
+                removeResource = id; 
+                replaceResource = id; 
+                reset = id; 
+                selectResource = id; 
+            }; 
+            CLASS = ResourceToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                newButton = id; 
+                removeButton = id; 
+                resourceLabelID = id; 
+                resourceMenu = id; 
+                resourceMenuButton = id; 
+                resourceSourceID = id; 
+            }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }
+    ); 
+    IBVersion = 1; 
+}

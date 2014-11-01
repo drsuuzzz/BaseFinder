@@ -1,0 +1,13 @@
+"FirstResponder" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSObject; };
+"GenericTool" = {ACTIONS = {}; OUTLETS = {controller = id; }; SUPERCLASS = NSObject; };
+"GenericToolCtrl" = {
+    ACTIONS = {"registerValue:" = id; }; 
+    OUTLETS = {channelSelID = id; dataProcessor = id; inspectorView = id; toolMaster = id; }; 
+    SUPERCLASS = NSObject; 
+};
+"SumChannels" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = GenericTool; };
+"SumChannelsCtrl" = {
+    ACTIONS = {}; 
+    OUTLETS = {replaceChannelsButton = id; }; 
+    SUPERCLASS = GenericToolCtrl; 
+};

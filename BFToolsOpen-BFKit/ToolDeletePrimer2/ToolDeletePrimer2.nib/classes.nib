@@ -1,0 +1,40 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dataList = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {apply = id; registerValue = id; reset = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                channelSelID = id; 
+                dataProcessor = id; 
+                inspectorView = id; 
+                toolMaster = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = ToolDeletePrimer2; LANGUAGE = ObjC; SUPERCLASS = GenericTool; }, 
+        {
+            ACTIONS = {precalcPrimerPeak = id; }; 
+            CLASS = ToolDeletePrimer2Ctrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                peakID = id; 
+                performSignalCutoffID = id; 
+                signalCutoffID = id; 
+                signalID = id; 
+                valleyID = id; 
+                wherePeakOccursID = id; 
+            }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }
+    ); 
+    IBVersion = 1; 
+}

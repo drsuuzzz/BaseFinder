@@ -1,0 +1,19 @@
+"FirstResponder" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSObject; };
+"GenericTool" = {ACTIONS = {}; OUTLETS = {controller = id; }; SUPERCLASS = NSObject; };
+"GenericToolCtrl" = {
+    ACTIONS = {"registerValue:" = id; }; 
+    OUTLETS = {channelSelID = id; dataProcessor = id; inspectorView = id; toolMaster = id; }; 
+    SUPERCLASS = NSObject; 
+};
+"SubtractMinimum" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = GenericTool; };
+"SubtractMinimumCtrl" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = GenericToolCtrl; };
+"ToolMaster" = {
+    ACTIONS = {
+        "adjustChannels:" = id; 
+        "blankButton:" = id; 
+        "callBases:" = id; 
+        "showInspector:" = id; 
+    }; 
+    OUTLETS = {currentButton = id; currentSeqEdit = id; mainInspector = id; }; 
+    SUPERCLASS = Object; 
+};

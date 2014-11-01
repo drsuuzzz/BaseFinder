@@ -1,0 +1,21 @@
+{
+    IBClasses = (
+        {CLASS = BoxView; LANGUAGE = ObjC; SUPERCLASS = NSView; }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = StatusController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                altStatus = id; 
+                currentProcess = id; 
+                masterMessage = id; 
+                messageText = id; 
+                processNameText = id; 
+                statusBoxView = id; 
+                statusPanel = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

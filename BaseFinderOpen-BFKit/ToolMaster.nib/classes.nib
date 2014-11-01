@@ -1,0 +1,30 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                activateTool = id; 
+                createNewNDDSToolLink = id; 
+                showBases = id; 
+                showScriptEditor = id; 
+                showTools = id; 
+                toolAction1 = id; 
+                toolAction2 = id; 
+                toolAction3 = id; 
+            }; 
+            CLASS = ToolMaster; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                emptyInspectorID = id; 
+                inspectorBox = id; 
+                processorPopUp = id; 
+                toolButton1 = id; 
+                toolButton2 = id; 
+                toolButton3 = id; 
+                toolPanel = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

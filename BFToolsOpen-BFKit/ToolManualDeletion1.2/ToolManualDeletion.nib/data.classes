@@ -1,0 +1,26 @@
+"FirstResponder" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSObject; };
+"GenericTool" = {ACTIONS = {}; OUTLETS = {dataList = id; }; SUPERCLASS = Object; };
+"GenericToolCtrl" = {
+    ACTIONS = {"apply:" = id; "registerValue:" = id; "reset:" = id; }; 
+    OUTLETS = {
+        applyButton = id; 
+        channelSelID = id; 
+        dataProcessor = id; 
+        inspectorView = id; 
+        toolMaster = id; 
+    }; 
+    SUPERCLASS = Object; 
+};
+"ToolManualDeletion" = {ACTIONS = {}; OUTLETS = {baseList = id; }; SUPERCLASS = GenericTool; };
+"ToolManualDeletionCtrl" = {
+    ACTIONS = {"switchRangeEnd:" = id; }; 
+    OUTLETS = {
+        altView = id; 
+        endPointsFormCell = id; 
+        endView = id; 
+        leaveSpaceSwitch = id; 
+        rangeForm = id; 
+        rangeView = id; 
+    }; 
+    SUPERCLASS = GenericToolCtrl; 
+};

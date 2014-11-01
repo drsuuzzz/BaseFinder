@@ -1,0 +1,50 @@
+{
+    IBClasses =     (
+                {
+            ACTIONS =             {
+                addOpenFile = id;
+                boundToAll = id;
+                boundToSelected = id;
+                clearTextAnalysis = id;
+                doPageLayout = id;
+                mailSuggestion = id;
+                open = id;
+                printFrontSeq = id;
+                save = id;
+                saveAs = id;
+                saveBinaryFile = id;
+                saveDataFile = id;
+                showAnalysisWindow = id;
+                showInfoPanel = id;
+                stepBack = id;
+                stepForward = id;
+                switchSaveFormat = id;
+            };
+            CLASS = Distributor;
+            LANGUAGE = ObjC;
+            OUTLETS =             {
+                analysisText = id;
+                analysisWindow = id;
+                infoPanel = id;
+                infoPanelBuildNumber = id;
+                masterViewList = id;
+                printOptionsID = id;
+                savePanel = id;
+                savePanelExtn = id;
+                stringTable = id;
+                suggestionBody = id;
+                suggestionForm = id;
+                toolBases = id;
+                toolChannel = id;
+                toolMaster = id;
+            };
+            SUPERCLASS = NSResponder;
+        },
+                {
+            CLASS = FirstResponder;
+            LANGUAGE = ObjC;
+            SUPERCLASS = NSObject;
+        }
+    );
+    IBVersion = 1;
+}

@@ -1,0 +1,60 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+	<title>File Menu</title>
+	<link href="../../task_tbl_style.css" rel="stylesheet" media="all">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="bksrvc001"></a><a name="xicnsc"></a>
+<div id="mainbox" align="left">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td width="3" height="32">&nbsp;</td>
+	<td width="32" height="32"><img src="../../Images/basefinder.tiff" alt="BaseFinder Icon" height="32" width="32"></td>
+	<td width="8" height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Loading and Saving Data</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td>
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Data Formats Available</b></font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">Currently the program can load data in the following formats:</font></p>
+<font size= "2" face="Lucida Grande,Arial,sans-serif">
+&bull;<i><b>lanes:</b></i>&nbsp;&nbsp;Multi-lane directory format. 
+<br>&bull;<i><b>abi:</b></i> &nbsp;&nbsp; Processed ABI sequencer format including ab1, abi, abd and fsa formats.
+<br>&bull;<i><b>scf:</b></i>&nbsp;&nbsp;SCF format
+<br>&bull;<i><b>dat, txt:</b></i>&nbsp;&nbsp;ASCII based data.  The data is columned so the number of data points on each line of the file represents the number of channels, and each line is a separate sample point across those channels.  Beckman Sequencer raw data exported as a .txt is supported.
+<br>&bull;<i><b>esd:</b></i>&nbsp;&nbsp;Beckman format.
+<br>&bull;<i><b>shape:</b></i>&nbsp;&nbsp;This format saves the complete script of tools executed on a data set and the associated tool parameters.  The original raw data and processed data to the point of the last tool executed are also saved with this format. The calculated alignment and fitted curve information specific to the <a href="../Tools/AlignInteg.html">Align and Integrate</a> tool is also saved.
+</font>
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Loading Data</b></font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">There are two ways data can be loaded into the program.  After launching the program, you can <b>open</b> a data file from the file menu.  The program determines the file format to use based on the file extension.  The program will also automatically launch and load data when a data file is double clicked in the workspace.  In addition, one can drag and drop a data file onto the application.</font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">Currently the program will fail to load a data file if any problems are encountered.  The program will probably not crash, but an error message may be presented.</font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">The same data file can be loaded in more than once and hence appear in multiple windows.  While this generally does not create problems, if you are saving work from two instances of the same file, only the last save from all of the opened files will actually be saved.</p>
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Saving Data</b></font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">After modifying the trace data it is possible to save the data into the same file or into a new format.  The save panel will allow selection from the many options to save the trace data.  See above for the different file types.
+<p>After the data has been base-called, and the base-sequence window has appeared, it is possible to save out just the base sequence into an ASCII text file.</font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">To do this, simply highlight the base-sequence window and either hit cmd-s or save under the <b>File</b> menu button.  A save panel will appear.  Upon selecting a directory and entering a file name, the sequence will be saved with the file extension <b>.seq</b>.  These file can then be loaded into Edit or any other text viewing program to be printed or viewed.</font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">In summary, BaseFinder can save data in the following formats: <b>.lanes</b>, <b>.data</b>, <b>.seqd</b>, <b>.scf</b>, <b>.txt</b>, and <b>.bfd</b>.  The <b>.txt</b>, <b>.dat</b> and <b>.bfd</b> formats each save only the selected lane; the <b>.lanes</b> format saves all lanes.  The save format is selected using the pop-up list in the save panel.
+<p><font face="Lucida Grande,Arial,sans-serif">There are additional write-only formats: <b>.seq</b>, which is an ASCII format that includes only base sequence data as described above.  It can also be selected from the save panel.  Also, <b>.fasta</b> which saves the sequence data in <b>FASTA</b> format.  It can also be selected from the save panel.</font></p>
+
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Printing</b></font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">The data can be printed simply by choosing <b>Print</b> from the menu.  Within the printing options panel that pops up, there is an option called <b>BaseFinder</b>.  Select this option to set view magnification, the number of views, and whether or not a header should be included in the printout.</p>
+<b>See Also:</b></font></p>
+<p><a href="../Windows/BaseSeqPanel.html"<font face="Lucida Grande,Arial,sans-serif">The base-sequence panel</font></p>
+<p><a href="../Windows/ViewAttributes.html"<font face="Lucida Grande,Arial,sans-serif">Changing the attributes of the data</font></p>
+<p><a href="../Windows/ViewMagnification.html"<font face="Lucida Grande,Arial,sans-serif">Changing view magnification and scaling</font></p>
+<p><a href="../Windows/DataFileWindow.html"<font face="Lucida Grande,Arial,sans-serif">A data file window</font></p>
+</font></p>
+	</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

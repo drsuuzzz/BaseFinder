@@ -1,0 +1,16 @@
+"NDDSLinker" = {
+    ACTIONS = {"link:" = id; "updateAvailableTools:" = id; };
+    OUTLETS = {
+        delegate = id; 
+        linkerPanel = id; 
+        machineName = id; 
+        serverVersion = id; 
+        toolScrollView = id; 
+    };
+    SUPERCLASS = NSObject;
+};
+"FirstResponder" = {
+    ACTIONS = {};
+    OUTLETS = {};
+    CATEGORY = LocalActions;
+};

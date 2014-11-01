@@ -1,0 +1,39 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dataList = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {apply = id; registerValue = id; reset = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                channelSelID = id; 
+                dataProcessor = id; 
+                inspectorView = id; 
+                toolMaster = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = ToolConvolve; LANGUAGE = ObjC; SUPERCLASS = GenericTool; }, 
+        {
+            CLASS = ToolConvolveCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {convolutionType = id; convolutionformID = id; }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }, 
+        {
+            ACTIONS = {adjustChannels = id; blankButton = id; callBases = id; showInspector = id; }; 
+            CLASS = ToolMaster; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {currentButton = id; currentSeqEdit = id; mainInspector = id; }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

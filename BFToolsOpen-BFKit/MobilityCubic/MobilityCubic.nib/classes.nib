@@ -1,0 +1,64 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {apply = id; registerValue = id; reset = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                channelSelID = id; 
+                dataProcessor = id; 
+                inspectorView = id; 
+                resetButton = id; 
+                toolMaster = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                constantsChanged = id; 
+                newMethodOK = id; 
+                switchFunctionDisplay = id; 
+                switchSlideChannel = id; 
+            }; 
+            CLASS = MobilityCubicCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                accessoryView = NSBox; 
+                channelID = id; 
+                constID = id; 
+                displayView = id; 
+                newMethodID = id; 
+                newMethodView = id; 
+                previousView = id; 
+                slideChannelID = id; 
+                slidingModeView = id; 
+            }; 
+            SUPERCLASS = ResourceToolCtrl; 
+        }, 
+        {
+            ACTIONS = {
+                changeLabel = id; 
+                getResourceList = id; 
+                newDoneSwitch = id; 
+                removeResource = id; 
+                replaceResource = id; 
+                reset = id; 
+                selectResource = id; 
+            }; 
+            CLASS = ResourceToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                newButton = id; 
+                removeButton = id; 
+                resourceLabelID = id; 
+                resourceMenu = id; 
+                resourceMenuButton = id; 
+                resourceSourceID = id; 
+            }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }
+    ); 
+    IBVersion = 1; 
+}

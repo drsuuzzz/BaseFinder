@@ -1,0 +1,18 @@
+<html><head>	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">	<title>Filter Convolution</title>	<link href="../../task_tbl_style.css" rel="stylesheet" media="all"></head><body leftmargin="15" bgcolor="#ffffff"><a name="bksrvc001"></a><a name="xicnsc"></a><div id="mainbox" align="left"><table width="100%" border="0" cellspacing="0" cellpadding="0">	<tr valign="bottom" height="32">	<td width="3" height="32">&nbsp;</td>	<td width="32" height="32"><img src="../../Images/basefinder.tiff" alt="BaseFinder Icon" height="32" width="32"></td>	<td width="8" height="32">&nbsp;&nbsp;</td>	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Filter Convolution</b></font></td>	</tr>	<tr height="10">	<td colspan="4" height="10">&nbsp;</td>	</tr></table><table width="100%" border="0" cellspacing="0" cellpadding="3">	<tr>	<td><p><font face="Lucida Grande,Arial,sans-serif">
+<p><font face="Lucida Grande,Arial,sans-serif">The raw data coming off most automated sequencing hardware has both high and low frequency noise which makes basecalling of peaks difficult.  This tool uses a published algorithm for using a gaussian filter to remove this extraneous noise.</p>
+<p>Convolving is usually best done after the data has been matrixed and before the data is basecalled.</p>
+<img src="../../Images/convolve.tiff">
+<p>There are two different convolution algorithms implemented in this tool: Standard and Zero-Area.   Standard convolution is functionally similar to a high frequency cutoff filter.  Zero-area is functionally like a band pass filter where both high and low frequencies are filtered out. </p>
+
+<p>Sigma should correspond to the Full Width at Half Maximum of a gaussian which represents a peak.  This should be in data points.  This corresponds to the high frequency cutoff point.  The smaller the sigma, the higher the cutoff point, and the less that will be filtered out.</p>
+
+<p>M is the window around the gaussian which is used.  Since a guassian never reaches zero, a finite window of the gaussian must be specified.   M should always be bigger than Sigma.</p>
+<img src="../../Images/StdGaussSmall.tiff">
+<img src="../../Images/ZeroGaussSmall.tiff">
+<p>By default convolution is applied to all channels, but one can limit it only to specific channels.</p>
+
+<p><b>See Also:</b></p>
+<p><a href = "HistCutoffPanel.html">Removing high/low data via histogram</a></p>
+<p><a href = "FFTPanel.html">Filtering the data</a></p>
+</font></p>
+	</td>	</tr></table></div></body></html>

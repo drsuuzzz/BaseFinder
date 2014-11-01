@@ -1,0 +1,21 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {cancel = id; changeDir = id; changeDrive = id; goHome = id; ok = id; }; 
+            CLASS = DirectoryBrowser; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                accessoryView = id; 
+                driveBox = id; 
+                drivePopUp = id; 
+                oldAccessoryView = id; 
+                theBrowser = id; 
+                thePanel = id; 
+                theTextField = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }
+    ); 
+    IBVersion = 1; 
+}

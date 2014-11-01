@@ -1,0 +1,79 @@
+{
+    IBClasses = (
+        {
+            CLASS = DeconvolutionTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {baseList = id; spreadFunctionID = id; }; 
+            SUPERCLASS = ResourceTool; 
+        }, 
+        {
+            ACTIONS = {
+                newMethodOK = id; 
+                simData = id; 
+                switchFunctionDisplay = id; 
+                switchSlideChannel = id; 
+            }; 
+            CLASS = DeconvolutionToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                accessoryView = NSBox; 
+                alphaID = id; 
+                channelID = id; 
+                constID = id; 
+                displayView = id; 
+                newMethodID = id; 
+                newMethodView = id; 
+                numIterationsID = id; 
+                shiftData = id; 
+                slideChannelID = id; 
+                slidingModeView = id; 
+            }; 
+            SUPERCLASS = ResourceToolCtrl; 
+        }, 
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dataList = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {apply = id; registerValue = id; reset = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                channelSelID = id; 
+                dataProcessor = id; 
+                inspectorView = id; 
+                resetButton = id; 
+                toolMaster = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = ResourceTool; LANGUAGE = ObjC; SUPERCLASS = GenericTool; }, 
+        {
+            ACTIONS = {
+                changeLabel = id; 
+                getResourceList = id; 
+                newDoneSwitch = id; 
+                removeResource = id; 
+                replaceResource = id; 
+                reset = id; 
+                selectResource = id; 
+            }; 
+            CLASS = ResourceToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                newButton = id; 
+                removeButton = id; 
+                resourceLabelID = id; 
+                resourceMenu = id; 
+                resourceMenuButton = id; 
+                resourceSourceID = id; 
+            }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }
+    ); 
+    IBVersion = 1; 
+}

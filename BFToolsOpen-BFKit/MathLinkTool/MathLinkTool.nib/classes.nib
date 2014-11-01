@@ -1,0 +1,47 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dataList = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {apply = id; registerValue = id; reset = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                channelSelID = id; 
+                dataProcessor = id; 
+                inspectorView = id; 
+                toolMaster = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = MathLinkTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {remoteMathServer = id; }; 
+            SUPERCLASS = GenericTool; 
+        }, 
+        {
+            ACTIONS = {setPreloadFile = id; setServerExecutablePath = id; }; 
+            CLASS = MathLinkToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                expression = id; 
+                hostname = id; 
+                launchID = id; 
+                launchPathID = id; 
+                preloadNameID = id; 
+                returnSequenceID = id; 
+                returnTraceID = id; 
+                usePreloadID = id; 
+            }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }
+    ); 
+    IBVersion = 1; 
+}

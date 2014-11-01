@@ -1,0 +1,198 @@
+"ArrayStorage" = {ACTIONS = {}; OUTLETS = {numericalDelegate = id; }; SUPERCLASS = Storage; };
+"BaseView" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSView; };
+"BasesView" = {
+    ACTIONS = {"cellSelected:" = id; "showPanel:" = id; "test:" = id; }; 
+    OUTLETS = {
+        aveConfidence = id; 
+        cellTemplate = id; 
+        currentBaseList = id; 
+        panelID = id; 
+        scrollView = id; 
+    }; 
+    SUPERCLASS = NSObject; 
+};
+"BoxView" = {ACTIONS = {"setPercent:" = id; }; OUTLETS = {}; SUPERCLASS = NSView; };
+"Distributor" = {
+    ACTIONS = {
+        "addOpenFile:" = id; 
+        "appWillInit:" = id; 
+        "boundToAll:" = id; 
+        "boundToSelected:" = id; 
+        "clearTextAnalysis:" = id; 
+        "closeActiveFile:" = id; 
+        "doPageLayout:" = id; 
+        "fitNormalize:" = id; 
+        "flushScriptCache:" = id; 
+        "mailSuggestion:" = id; 
+        "open:" = id; 
+        "openDirectory:" = id; 
+        "printFrontSeq:" = id; 
+        "saveAs:" = id; 
+        "saveBinaryFile:" = id; 
+        "saveCurrent:" = id; 
+        "saveDataFile:" = id; 
+        "saveSelected:" = id; 
+        "saveWithPanel:" = id; 
+        "showAnalysisWindow:" = id; 
+        "showInfoPanel:" = id; 
+        "stepBack:" = id; 
+        "stepForward:" = id; 
+        "switchSaveFormat:" = id; 
+        "switchSaveGroupIndex:" = id; 
+    }; 
+    OUTLETS = {
+        analysisText = id; 
+        analysisWindow = id; 
+        infoPanel = id; 
+        infoPanelBuildNumber = id; 
+        masterViewList = id; 
+        printOptionsID = id; 
+        saveCurrentPanelExtn = id; 
+        saveGroupIndexRadio = id; 
+        savePanel = id; 
+        savePanelExtn = id; 
+        stringTable = id; 
+        suggestionBody = id; 
+        suggestionForm = id; 
+        toolBases = id; 
+        toolChannel = id; 
+        toolMaster = id; 
+    }; 
+    SUPERCLASS = NSResponder; 
+};
+"FirstResponder" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSObject; };
+"GNULicense" = {
+    ACTIONS = {"printLicense:" = id; "showLicense:" = id; }; 
+    OUTLETS = {panel = id; }; 
+    SUPERCLASS = NSObject; 
+};
+"GenericTool" = {ACTIONS = {}; OUTLETS = {baseList = id; }; SUPERCLASS = NSObject; };
+"GenericToolCtrl" = {
+    ACTIONS = {"apply:" = id; "registerValue:" = id; "reset:" = id; }; 
+    OUTLETS = {channelSelID = id; dataProcessor = id; toolMaster = id; }; 
+    SUPERCLASS = NSObject; 
+};
+"GraphEngine" = {
+    ACTIONS = {}; 
+    OUTLETS = {delegate = id; targetView = id; }; 
+    SUPERCLASS = Object; 
+};
+"LaneCountController" = {
+    ACTIONS = {
+        "cancelSet:" = id; 
+        "loadData:" = id; 
+        "setParams:" = id; 
+        "setWindowParams:" = id; 
+        "windowDidBecomeKey:" = id; 
+        "windowDidUpdate:" = id; 
+    }; 
+    OUTLETS = {lanecountID = id; thePanel = id; }; 
+    SUPERCLASS = NSObject; 
+};
+"NewInspector" = {
+    ACTIONS = {
+        "orderBackPanel:" = id; 
+        "orderFrontPanel:" = id; 
+        "toggleInspectorPanels:" = id; 
+        "windowDidUpdate:" = id; 
+    }; 
+    OUTLETS = {
+        InspectorBox = id; 
+        InspectorPanel = id; 
+        thePopUpList = id; 
+        thePopUpListButton = id; 
+    }; 
+    SUPERCLASS = Object; 
+};
+"NumericalObject" = {
+    ACTIONS = {"init:" = id; }; 
+    OUTLETS = {spacingObj = id; }; 
+    SUPERCLASS = Object; 
+};
+"ParamController" = {
+    ACTIONS = {
+        "cancelSet:" = id; 
+        "setParams:" = id; 
+        "setWindowParams:" = id; 
+        "windowDidBecomeKey:" = id; 
+        "windowDidUpdate:" = id; 
+    }; 
+    OUTLETS = {
+        callingparamID = id; 
+        convolutionformID = id; 
+        cutoffformID = id; 
+        histocutoffID = id; 
+    }; 
+    SUPERCLASS = Object; 
+};
+"PreferencesObject" = {
+    ACTIONS = {
+        "changeDebugMode:" = id; 
+        "changeViewPercent:" = id; 
+        "numViewsChanged:" = id; 
+        "resetPanel:" = id; 
+        "setParams:" = id; 
+        "showPreferences:" = id; 
+        "switchExpertMode:" = id; 
+    }; 
+    OUTLETS = {
+        autosaveID = id; 
+        debugModeID = id; 
+        expertModeID = id; 
+        numViewsID = id; 
+        prefPanel = id; 
+        threadingID = id; 
+        viewPercentID = id; 
+    }; 
+    SUPERCLASS = NSObject; 
+};
+"PrintingOptions" = {
+    ACTIONS = {
+        "doPageLayout:" = id; 
+        "switchFileAsTitle:" = id; 
+        "switchPointMarkers:" = id; 
+        "switchRangeDisplay:" = id; 
+    }; 
+    OUTLETS = {dataRangeID = id; fileAsTitleID = id; optionsView = id; pointMarkersID = id; }; 
+    SUPERCLASS = NSObject; 
+};
+"ResourceTool" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = GenericTool; };
+"Script" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = List; };
+"StatusController" = {
+    ACTIONS = {"done:" = id; "updateMessage:" = id; "updatePercent:" = id; }; 
+    OUTLETS = {
+        currentProcess = id; 
+        messageNameText = id; 
+        messageText = id; 
+        messageWindow = id; 
+        processNameText = id; 
+        processWindow = id; 
+        statusNameText = id; 
+        statusWindow = id; 
+        theBoxView = id; 
+    }; 
+    SUPERCLASS = NSObject; 
+};
+"ToolMaster" = {
+    ACTIONS = {
+        "activateTool:" = id; 
+        "createNewNDDSToolLink:" = id; 
+        "showBases:" = id; 
+        "showScriptEditor:" = id; 
+        "showTools:" = id; 
+        "toolAction1:" = id; 
+        "toolAction2:" = id; 
+        "toolAction3:" = id; 
+    }; 
+    OUTLETS = {
+        emptyInspectorID = id; 
+        inspectorBox = id; 
+        processorPopUp = id; 
+        toolButton1 = id; 
+        toolButton2 = id; 
+        toolButton3 = id; 
+        toolPanel = id; 
+    }; 
+    SUPERCLASS = NSObject; 
+};
+"callingController" = {ACTIONS = {}; OUTLETS = {calculationStructures = id; }; SUPERCLASS = Object; };

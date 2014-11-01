@@ -1,0 +1,29 @@
+"FirstResponder" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSObject; };
+"GenericTool" = {ACTIONS = {}; OUTLETS = {dataList = id; }; SUPERCLASS = Object; };
+"GenericToolCtrl" = {
+    ACTIONS = {"apply:" = id; "registerValue:" = id; "reset:" = id; }; 
+    OUTLETS = {
+        applyButton = id; 
+        channelSelID = id; 
+        dataProcessor = id; 
+        inspectorView = id; 
+        toolMaster = id; 
+    }; 
+    SUPERCLASS = Object; 
+};
+"ToolConvolve" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = GenericTool; };
+"ToolConvolveCtrl" = {
+    ACTIONS = {}; 
+    OUTLETS = {convolutionType = id; convolutionformID = id; }; 
+    SUPERCLASS = GenericToolCtrl; 
+};
+"ToolMaster" = {
+    ACTIONS = {
+        "adjustChannels:" = id; 
+        "blankButton:" = id; 
+        "callBases:" = id; 
+        "showInspector:" = id; 
+    }; 
+    OUTLETS = {currentButton = id; currentSeqEdit = id; mainInspector = id; }; 
+    SUPERCLASS = Object; 
+};

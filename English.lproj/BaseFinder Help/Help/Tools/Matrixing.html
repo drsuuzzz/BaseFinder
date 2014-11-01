@@ -1,0 +1,63 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+	<title>Matrixing</title>
+	<link href="../../task_tbl_style.css" rel="stylesheet" media="all">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="bksrvc001"></a><a name="xicnsc"></a>
+<div id="mainbox" align="left">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td width="3" height="32">&nbsp;</td>
+	<td width="32" height="32"><img src="../../Images/basefinder.tiff" alt="BaseFinder Icon" height="32" width="32"></td>
+	<td width="8" height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Matrixing</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td><p><font face="Lucida Grande,Arial,sans-serif">
+<p><font face="Lucida Grande,Arial,sans-serif">With fluorescent dye sequencing, each sequencing reaction is run with a different dye attached to the primer.  When excited with laser light, these dyes fluoresce with unique spectrums.  To identify each dye, the data collection instrument collects light at several (usually 4) different wavelengths.  The ratios of collected light at the different wavelengths maps one-to-one to each dye.</p>
+<p>This mapping from "emmission space" to "dye space" is accomplished by a linear transformation matrix.  After Matrixing, each channel of the data will correspond to a particular dye and hence sequencing reaction.</p>
+<p>The Matrixing tool is optional as different sequencing equipment may already perform matrixing during data collection.</p></font>
+<img src="../../Images/Matrix.tiff">
+
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Creating a matrix</b></font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">A new matrix is needed whenever a new set of dyes is used, or if the collection instrument is altered (different filters, different laser, different collector, ...).</p>
+
+<p>The process of creating a new matrix involves identifying peaks in a raw data file.  In the current implementation, only one peak of each dye-type is used to characterize that dye's emmision pattern, thus it is important to use the best peak possible.  It has been our experience to use peaks early in the run and to use either peaks from doublets or the middle peak of a triplet.</p>
+
+<p>To create a new matrix, first click on the <b>New</b> button.  The matrix label will change to "Untitled-#", and a message will appear above the 1234 radio buttons asking you to find and click on a peak of a certain channel within the data view.  One needs to repeat this process for each of the four channel/dye types.  One changes the channel/dye type by clicking on the radio button 1234 in the middle of the panel.  When you have identified peaks for each of channel/dye types, click the <b>Done</b> button (alternate state of the new button).  If you wish to cancel this process, simply hit the <b>Cancel</b> button and no matrix will be created.</p></font>
+
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Renaming matrix</b></font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">After making a new matrix, it will be labeled as "Untitled-#".  It is a good idea to rename the matrix to an appropriate label at this point.  One does this by changing the name in the matrix label field and hitting return.  One can also rename a matrix whenever they choose.</p>
+<p>Each time the program starts up, new matrixes start with "Untitled-1" and progress from there until the program quits.</p></font>
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Applying matrix</b></font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">Even if one has just created a new matrix, it still needs to be applied to the data.  One does this by clicking on the <b>Append</b> button at the bottom of the Tool Inspector.</font></p>
+ 
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Removing matrixes</b></font></p>
+ <p><font face="Lucida Grande,Arial,sans-serif">If matrixes are no longer useful, they can be removed from the list by first selecting the desired matrix from the popup list, and then hitting the <b>Remove</b> button.</font></p>
+
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Editing the matrix</b></font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">After a matrix has been created, one can change the data values by editing the numbers in the text fields at the bottom of the panel.  To register the changes, hit return when you are finished editing.</font></p>
+
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>Notes:</b></font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">The matrixes are stored by default in the directory:</p>
+<p>	/Library/BaseFinder/Matrixes</p>
+<p>They are ascii formated files and can be easily copied.  If you have difficulty saving or loading matrixes, it is probably a permissions problem in either creating this directory or writing to it.</p>
+
+<p>If you want to put your Matrixes directory somewhere other than /Library/BaseFinder, change the Resource Path field in the Preferences panel.
+
+</font></p>
+	</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+"GenericTool" = {
+    ACTIONS = {};
+    OUTLETS = {dataList = id; };
+    SUPERCLASS = Object;
+};
+"GenericToolCtrl" = {
+    ACTIONS = {"apply:" = id; "registerValue:" = id; "reset:" = id; };
+    OUTLETS = {
+        applyButton = id; 
+        channelSelID = id; 
+        dataProcessor = id; 
+        inspectorView = id; 
+        toolMaster = id; 
+    };
+    SUPERCLASS = Object;
+};
+"ToolNormalize2Ctrl" = {
+    ACTIONS = {};
+    OUTLETS = {windowWidthID = id; };
+    SUPERCLASS = GenericToolCtrl;
+};
+"ToolMaster" = {
+    ACTIONS = {
+        "adjustChannels:" = id; 
+        "blankButton:" = id; 
+        "callBases:" = id; 
+        "showInspector:" = id; 
+    };
+    OUTLETS = {currentButton = id; currentSeqEdit = id; mainInspector = id; };
+    SUPERCLASS = Object;
+};
+"ToolNormalize2" = {
+    ACTIONS = {};
+    OUTLETS = {};
+    SUPERCLASS = GenericTool;
+};
+"FirstResponder" = {
+    ACTIONS = {};
+    OUTLETS = {};
+    CATEGORY = LocalActions;
+};

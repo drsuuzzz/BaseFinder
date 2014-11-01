@@ -1,0 +1,23 @@
+"FirstResponder" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSObject; };
+"GenericTool" = {ACTIONS = {}; OUTLETS = {dataList = id; }; SUPERCLASS = Object; };
+"GenericToolCtrl" = {
+    ACTIONS = {"apply:" = id; "registerValue:" = id; "reset:" = id; }; 
+    OUTLETS = {
+        applyButton = id; 
+        channelSelID = id; 
+        dataProcessor = id; 
+        inspectorView = id; 
+        toolMaster = id; 
+    }; 
+    SUPERCLASS = Object; 
+};
+"ToolBaseCalling" = {
+    ACTIONS = {}; 
+    OUTLETS = {baseList = id; callingObj = id; }; 
+    SUPERCLASS = GenericTool; 
+};
+"ToolBaseCallingCtrl" = {
+    ACTIONS = {}; 
+    OUTLETS = {BISlaneID = id; paramMatrix = id; useBISID = id; }; 
+    SUPERCLASS = GenericToolCtrl; 
+};

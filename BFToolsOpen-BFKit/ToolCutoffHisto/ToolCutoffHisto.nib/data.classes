@@ -1,0 +1,31 @@
+"FirstResponder" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSObject; };
+"GenericTool" = {ACTIONS = {}; OUTLETS = {dataList = id; }; SUPERCLASS = Object; };
+"GenericToolCtrl" = {
+    ACTIONS = {"apply:" = id; "registerValue:" = id; "reset:" = id; }; 
+    OUTLETS = {
+        applyButton = id; 
+        channelSelID = id; 
+        dataProcessor = id; 
+        inspectorView = id; 
+        toolMaster = id; 
+    }; 
+    SUPERCLASS = Object; 
+};
+"HistogramView" = {
+    ACTIONS = {"switchEnabledChannels:" = id; "takeNumSlots:" = id; }; 
+    OUTLETS = {dataList = id; myScrollView = id; scaleViewID = id; }; 
+    SUPERCLASS = NSView; 
+};
+"ScaleView" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSView; };
+"ToolCutoffHisto" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = GenericTool; };
+"ToolCutoffHistoCtrl" = {
+    ACTIONS = {}; 
+    OUTLETS = {
+        bigHistViewID = id; 
+        combinedID = id; 
+        cutoffFormID = id; 
+        histViewID = id; 
+        upperLowerID = id; 
+    }; 
+    SUPERCLASS = GenericToolCtrl; 
+};

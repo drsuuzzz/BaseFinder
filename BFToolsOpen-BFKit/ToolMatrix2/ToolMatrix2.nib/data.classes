@@ -1,0 +1,54 @@
+"FirstResponder" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = NSObject; };
+"GenericTool" = {ACTIONS = {}; OUTLETS = {dataList = id; }; SUPERCLASS = Object; };
+"GenericToolCtrl" = {
+    ACTIONS = {"apply:" = id; "registerValue:" = id; "reset:" = id; }; 
+    OUTLETS = {
+        applyButton = id; 
+        channelSelID = id; 
+        dataProcessor = id; 
+        inspectorView = id; 
+        resetButton = id; 
+        toolMaster = id; 
+    }; 
+    SUPERCLASS = Object; 
+};
+"ResourceTool" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = GenericTool; };
+"ResourceToolCtrl" = {
+    ACTIONS = {
+        "changeLabel:" = id; 
+        "getResourceList:" = id; 
+        "newDoneSwitch:" = id; 
+        "removeResource:" = id; 
+        "replaceResource:" = id; 
+        "reset:" = id; 
+        "selectResource:" = id; 
+    }; 
+    OUTLETS = {
+        newButton = id; 
+        removeButton = id; 
+        resourceLabelID = id; 
+        resourceMenu = id; 
+        resourceMenuButton = id; 
+        resourceSourceID = id; 
+    }; 
+    SUPERCLASS = GenericToolCtrl; 
+};
+"ToolMatrix2" = {ACTIONS = {}; OUTLETS = {}; SUPERCLASS = ResourceTool; };
+"ToolMatrix2Ctrl" = {
+    ACTIONS = {
+        "pickBase:" = id; 
+        "sendtoScatterPlotter:" = id; 
+        "switchMatrixNormalize:" = id; 
+    }; 
+    OUTLETS = {
+        altView = id; 
+        basePickID = id; 
+        instructionDisplay = id; 
+        matrixID = id; 
+        newView = id; 
+        normalizeMatrixID = id; 
+        removeNegativeID = id; 
+        sendScatterID = id; 
+    }; 
+    SUPERCLASS = ResourceToolCtrl; 
+};

@@ -1,0 +1,26 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {controller = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {registerValue = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {channelSelID = id; dataProcessor = id; inspectorView = id; toolMaster = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = SecondDerivative; LANGUAGE = ObjC; SUPERCLASS = GenericTool; }, 
+        {
+            CLASS = SecondDerivativeCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {scaleSwitch = id; }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }
+    ); 
+    IBVersion = 1; 
+}

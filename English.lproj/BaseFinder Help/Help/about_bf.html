@@ -1,0 +1,77 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1"></meta>
+	<title>About BaseFinder</title>
+	<link href="../task_tbl_style.css" rel="stylesheet" media="all">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff">
+<div id="mainbox" align="left" style="margin-top: 0px">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr height="28">
+					<td width="3" height="28">&nbsp;</td>
+					<td valign="top" height="28">
+						<p><font face="Lucida Grande,Arial,sans-serif"><a href="../tocstart.html">BaseFinder Help</a></font></p>
+					</td>
+				</tr>
+			</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr align="left" valign="top">
+					<td valign="bottom" width="3"></td>
+					<td valign="bottom" width="120"><font id="topic" size="4" face="Lucida Grande,Arial,sans-serif"><b>Contents</b></font></td>
+					<td rowspan="3" valign="middle" width="24" background="../Images/vertline2.gif">&nbsp;</td>
+					<td rowspan="3" valign="middle" width="7"></td>
+					<td valign="bottom" width="32"><img src="../Images/basefinder.tiff" alt="BaseFinder icon" height="32" width="32"></td>
+					<td valign="bottom" width="7"></td>
+					<td valign="bottom"><font id="topic" size="4" face="Lucida Grande,Arial,sans-serif"><b>About BaseFinder</b></font></td>
+				</tr>
+				<tr align="left" valign="top" height="18">
+					<td width="3" height="18">&nbsp;</td>
+					<td width="120" height="18">&nbsp;</td>
+					<td colspan="3" height="18">&nbsp;</td>
+				</tr>
+				<tr align="left" valign="top">
+					<td width="3">&nbsp;</td>
+					<td width="120">
+						<p><a href="about_bf.html"><font color="#ff4500" face="Lucida Grande,Arial,sans-serif">About BaseFinder</font></a></p>
+						<p><a href="QuickStart.html"><font face="Lucida Grande,Arial,sans-serif">Quick Start Guide</font></a></p>
+						<p><a href="menutoc.html"><font face="Lucida Grande,Arial,sans-serif">BaseFinder Menu</font></a></p>
+						<p><a href="windowtoc.html"><font face="Lucida Grande,Arial,sans-serif">BaseFinder Windows</font></a></p>
+						<p><a href="Toolstoc.html"><font face="Lucida Grande,Arial,sans-serif">BaseFinder Tools</font></a></p>
+						<p><a href="Suggestion.html"><font face="Lucida Grande,Arial,sans-serif">Suggestions</a></font></p>
+            <p><font face="Lucida Grande,Arial,sans-serif"><a href="Acknowledge.html">Acknowledgements</a></font></p>
+					</td>
+					<td colspan="3">
+<p><font face="Lucida Grande,Arial,sans-serif">
+<p><font face="Lucida Grande,Arial,sans-serif">BaseFinder was started in 1991 by Morgan Giddings, PhD. BaseFinder was originally developed as a tool for processing trace data for DNA sequencing.  More recently it has been enhanced to support the analysis of RNA structure.</font></p>
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>DNA Analysis</b></font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">In the typical automated or semi-automated instrument, data is collected from an electrophoretic gel or capillary where fluorescently-labelled DNA is being separated.  This is termed the raw data, and consists of four channels of data each of which is the time varying signal intensity collected at a specific light wavelength.  This raw data is then processed to remove noise, and is converted by the process of multi-component analysis (a.k.a. <a href="Tools/Matrixing.html">'matrixing'</a>) to trace data.</font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">The trace data is four-channel data where each channel represents the concentration of one of the four specific end-terminated fragments (A, C, G, and T), as shown below.  When a peak occurs due to the high-concentration of a specific end terminated fragment,  this generally indicates the presence of a base.  For example, all the blue peaks below represent the likely locations of the C base (cytosine) in the sequence, green represents A (adenine), etc.  Base calling consists of identifying the significant peaks and their ordering and determining the nucleotide sequence.  This can be complicated by noise (such as the smaller peaks present in the data shown below), inconsistent peak spacing, inconsistent peak height, etc.  The task becomes particularly complicated late in a sequencing run where sensitivity and resolution are often decreased to the point that sequence determination is very difficult by eye.</font></p>
+<img src="../Images/bases.tiff">
+<p><font face="Lucida Grande,Arial,sans-serif">Once the sequence for a fragment is determined (to some high degree of accuracy), it is saved and can be used as input to fragment assembly algorithms or for other sequence comparison purposes.  The base-called sequence from the trace-data above is shown below.</font></p>
+<img src="../Images/baseswbases.tiff">
+<p><font face="Lucida Grande,Arial,sans-serif">Our goal was to develop a robust, extensible, general algorithm that can be used for base calling regardless of the instrument that the data is collected on.  </font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">For an overview of how the base calling algorithm works, as well as the general procedure to be utilized in processing data:. </font></p>
+<p><font face="Lucida Grande,Arial,sans-serif"><a href="http://www.pubmedcentral.nih.gov/articlerender.fcgi?tool=pubmed&pubmedid=8233787">Giddings, M.C., Haker, M., Brumley, R.L. Jr., and Smith, L.M., "An Adaptive, Object Oriented Strategy For Base Calling in DNA Sequence Analysis" (1993), <i>Nucleic Acids Research</i>, 21(19):4530-40.</a></font></p>
+<p><font size="4" face="Lucida Grande,Arial,sans-serif"><b>RNA Anaysis</b></font></p>
+<p><font face="Lucida Grande,Arial,sans-serif">RNA secondary structure can be analyzed using a technology called high-throughput selective 2'-hydroxyl acylation analyzed by primer extension (hSHAPE) that quantitatively measures backbone flexibility of nucleotides at single nucleotide resolution (Merino et al 2005). hSHAPE chemistry involves exposing RNA to selected electrophilic reagents, which modify the RNA ribose 2'-hydroxyl in a flexibility-sensitive manner to form covalent 2'-O-adducts (Merino et al 2005, Mortimer et al 2007).  Nucleotides in bulge, loop, or single stranded regions readily react, while paired or otherwise constrained nucleotides do not. Sites of modification are located by first annealing a 5'-fluorescently labeled primer to the RNA, and then extending the primer to the site of modification. The product of this experiment is a series of extended, fluorescently labeled primers whose length and amount correspond to the position and degree of modification-and hence flexibility-at every nucleotide in an RNA. Sequencing reactions for selected nucleotides, and a control omitting the reagent, are performed concurrently, using the same primer sequence but with 5'-labeled fluorophores. (Merino et al 2005, Wilkinson et al 2005, Wilkinson et al 2006, Wilkinson et al 2007).</p>
+<p>The cDNA products from each of the four reactions are combined and separated on an automated capillary electrophoresis instrument of the type commonly used for DNA sequencing. A single hSHAPE experiment measures backbone flexibility of more than 300 RNA nucleotides at a time; multiple experiments can be combined for the analysis of RNAs of any length.</p>
+<p>The raw data produced by an hSHAPE experiment closely resembles raw DNA sequencing traces, but with two important differences: (i) quantitative RNA structural information as well as sequene information is included in the raw data, and (ii) peaks that represent the same position may exist simultaneously in multiple channels.</p>
+<p>SHAPE traces require many of the same initial manipulation steps as DNA sequencing traces.  These steps may include loading new traces, adjusting for fluorescent baseline, correcting for multiplexing, and correction of mobility shifts between channels.  To accomodate the unique properties of hSHAPE traces, a series of new tools have been developed in the context of the BaseFinder platform. These tools, termed the ShapeFinder tool set, consist of <a href="Tools/AlignInteg.html">Align and Integrate</a>, <a href="Tools/Scale.html">Scale Factor</a>, and <a href="Tools/signaldecay.html">Signal Decay Correction</a>. To get started, please see the <a href="QuickStart.html">Quick Start Guide</a> as well as the ShapeFinder tools mentioned above. The output of these tools - a measure of RNA backbone flexibility as a function of nucleotide sequence - can then be used to propose accurate structures, monitor ligand binding, identify crystallographic contacts, explore the energy ladnscape of unfolding, etc. of an arbitrary RNA molecule.</p>
+<p>For more information about SHAPE chemistry and analysis of the data, please refer to the following papers. </p>
+<p><A HREF="http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Retrieve&db=pubmed&dopt=AbstractPlus&list_uids=15783204">Merino, EJ, Wilkinson KA, Coughlan JL, Weeks KM, "RNA Structure Analysis at Single Nucleotide Resolution by Selective 2'-Hydroxyl Acylation and Primer Extension (SHAPE)" (2005), <i>Journal American Chemical Society</i>, 127:4223-4231.</a> The first SHAPE paper describing the basic chemistry and procedure.</p>
+<p> <A HREF="http://www.ncbi.nlm.nih.gov/sites/entrez?cmd=Retrieve&db=pubmed&dopt=AbstractPlus&list_uids=15796531">Wilkinson KA, Merino EJ, Weeks KM, "RNA SHAPE chemistry reveals non-hierarchical interactions dominate equilibrium structural transitions in tRNA(Asp) transcripts" (2005) <i> Journal of the American Chemical Society</i>, 127:4659-4667.</a> SHAPE may be used to monitor thermal unfolding of RNA.</p>
+<p><A HREF="http://www.unc.edu/depts/splice/pubs/2006_kw_nprot.pdf">Wilkinson KA, Merino EJ, Weeks KM, "Selective 2'-hydroxyl acylation analyzed by primer extension (SHAPE): quantitative RNA structure analysis at single nucleotide resolution" (2006), <i> Nature Protocols</i>, 1:1610-1616</a> A helpful step-by-step procedure for analysis of SHAPE on an electrophoresis gel.</p>
+<p><A HREF="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Retrieve&dopt=AbstractPlus&list_uids=17367143&query_hl=1&itool=pubmed_docsum">Mortimer SA, Weeks KM, "A fast acting reagent for accurate analysis of RNA secondary and tertiary structure by SHAPE chemistry" (2007), <i>Journal of the American Chemical Society</i>, 129:4144-4145</a> Describes useful electrophiles for SHAPE.</p>
+<p>Wilkinson KA, Gorelick RJ, Vasa SM, Guex N, Rein A, Mathews, DH, Giddings MC, Weeks KM, "High-Throughput SHAPE Analysis Reveals Structures in HIV-1 Genomic RNA Strongly Conserved Across Distinct Biological States" (2007), <!--i>Public Library of Science Biology</i-->, Manuscript Submitted. Describes the analysis of SHAPE data on a DNA sequencer and the use of that data to generate accurate RNA structures</p>
+<p>Vasa SM, Guex N, Wilkinson KA, Weeks KM and Giddings MC, "ShapeFinder: A software system for high-throughput analysis of RNA structure", In preparation.</p>
+
+
+	</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

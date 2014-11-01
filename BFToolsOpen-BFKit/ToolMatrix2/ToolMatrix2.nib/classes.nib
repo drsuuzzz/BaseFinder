@@ -1,0 +1,66 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            CLASS = GenericTool; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {dataList = id; }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {apply = id; registerValue = id; reset = id; }; 
+            CLASS = GenericToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                applyButton = id; 
+                channelSelID = id; 
+                dataProcessor = id; 
+                inspectorView = id; 
+                resetButton = id; 
+                toolMaster = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = ResourceTool; LANGUAGE = ObjC; SUPERCLASS = GenericTool; }, 
+        {
+            ACTIONS = {
+                changeLabel = id; 
+                getResourceList = id; 
+                newDoneSwitch = id; 
+                removeResource = id; 
+                replaceResource = id; 
+                reset = id; 
+                selectResource = id; 
+            }; 
+            CLASS = ResourceToolCtrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                newButton = id; 
+                removeButton = id; 
+                resourceLabelID = id; 
+                resourceMenu = id; 
+                resourceMenuButton = id; 
+                resourceSourceID = id; 
+            }; 
+            SUPERCLASS = GenericToolCtrl; 
+        }, 
+        {CLASS = ToolMatrix2; LANGUAGE = ObjC; SUPERCLASS = ResourceTool; }, 
+        {
+            ACTIONS = {pickBase = id; sendtoScatterPlotter = id; switchMatrixNormalize = id; }; 
+            CLASS = ToolMatrix2Ctrl; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                altView = id; 
+                basePickID = id; 
+                instructionDisplay = id; 
+                matrixID = id; 
+                newView = id; 
+                normalizeMatrixID = id; 
+                removeNegativeID = id; 
+                sendScatterID = id; 
+            }; 
+            SUPERCLASS = ResourceToolCtrl; 
+        }
+    ); 
+    IBVersion = 1; 
+}

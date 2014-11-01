@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+	<title>Deconvolution</title>
+	<link href="../../task_tbl_style.css" rel="stylesheet" media="all">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="bksrvc001"></a><a name="xicnsc"></a>
+<div id="mainbox" align="left">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td width="3" height="32">&nbsp;</td>
+	<td width="32" height="32"><img src="../../Images/basefinder.tiff" alt="BaseFinder Icon" height="32" width="32"></td>
+	<td width="8" height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Deconvolution</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td><p><font face="Lucida Grande,Arial,sans-serif">
+<p><font face="Lucida Grande,Arial,sans-serif">The electrophoretic separation used in DNA sequencing introduces an effect called zone broadening. This effect reduces interpeak resolution by widening the fragment populations during separation. The zone-broadening process is generally equivalent in effect to convolution with a Gaussian-based function. The reduced resolution attributable to band spreading causes reduced accuracy in base-calling. The effect becomes more prominent as the electrophoresis time increases, thereby contributing to the difficulty of accurately base labeling the later portions of data collected from a sequencing separation. The deconvolution process partially reverses the effects of band spreading, thereby increasing resolution and base-calling accuracy. The process is sensitive to noise, and if overapplied can result in the appearance of false peaks, so it must be used with care.</font></p>
+<p>The Deconvoution tool attempts to estimate the spread function as a function of time.  In addition, the algorithm attempts to estimate a data set that when convolved with the spread function results in the actual observed data set.  The estimated data set is the end result of the algorithm, displayed to the user.</p>
+<p>The details of the algorithm are described in Giddings et al, 1998.  For the purposes of interpreting the parameters in the tool it should be noted that the <b>Number Iterations</b> parameter indicates the number of iterations or repetitions the algorithm goes through to estimate the data set.  The parameter <b>alpha</b> influences the calculations such that negative or excessively large values are "avoided" in the estimations of the data set (Giddings et al, 1998).</p>
+<img src="../../Images/deconvolve.tiff">
+<p>The zone broadening function is approximated by a symmetrical Gaussian.  The width of the Gaussian peak, <b>sigma</b>, varies peak by peak and thus the sigma function is estimated by a polynomial: a + bx + cx^2.  The default estimates for a, b, and c are displayed when first selecting the tool.  Selecting the <b>New</b> button provides options for calculating new estimates for the a, b, and c coefficients.  The user can either manually enter the coefficients estimated by other tools or allow the coefficients to be estimated using the <b>gaussPeaks</b> file created by the <a href="gauss.html">Gauss Peak Fitting tool</a>.  This file contains a representative sample list of position (time) versus sigma values.</p>
+<p><font face="Lucida Grande,Arial,sans-serif"><a href="http://www.genome.org/cgi/content/full/8/6/644">Giddings MC, Severin J, Westphall M, Wu J and Smith LM, "A Software System for Data Analysis in Automated DNA Sequencing", <i>Genome Research</i>, <b>1998</b>, 8:644-665</a></font></p>
+
+	</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

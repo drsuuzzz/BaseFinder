@@ -1,0 +1,46 @@
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+	<title>Signal Decay</title>
+	<link href="../../task_tbl_style.css" rel="stylesheet" media="all">
+</head>
+
+<body leftmargin="15" bgcolor="#ffffff"><a name="bksrvc001"></a><a name="xicnsc"></a>
+<div id="mainbox" align="left">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr valign="bottom" height="32">
+	<td width="3" height="32">&nbsp;</td>
+	<td width="32" height="32"><img src="../../Images/basefinder.tiff" alt="BaseFinder Icon" height="32" width="32"></td>
+	<td width="8" height="32">&nbsp;&nbsp;</td>
+	<td valign="bottom" height="32"><font size="4" face="Lucida Grande,Arial,sans-serif" id="topic"><b>Signal Decay Correction</b></font></td>
+	</tr>
+	<tr height="10">
+	<td colspan="4" height="10">&nbsp;</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+	<tr>
+	<td><p><font face="Lucida Grande,Arial,sans-serif">
+<p><font face="Lucida Grande,Arial,sans-serif">The Signal Decay Correction tool is designed to correct the signal drop off observed in RNA hSHAPE experiments.  In an hSHAPE experiment, the RNA is sparsely modified by a nucleophilic reagent such that approximately one in 300 RNA nucleotides form a covalent 2'-O-adduct. Because modification is stochastic over long RNA distances, multiple modifications are highly probable over a 500-600 nucleotide read.  Since primer extension terminates at the first modified position it encounters, signal decreases smoothly over the course of the read, a noticeable signal intensity drop off similar to an exponential decay curve. This is not a new problem in DNA sequencing. However, for RNAs involved in SHAPE experiments, fluorescent intensity indicates nucleotide reactivity/flexibility such that DNA signal normalizing procedures (<a href="Normalize.html">Normalization: Signal Average</a> Tool) are not applicable. A model derived from the binomial distribution has been derived to correct the signal drop off. </p>
+<p>D(x) = Aq^x + C</p>
+<p>Where A, q and C are unknown coefficients calculated to fit the trace data using a method of non-linear least squares curve fitting.  q = 1-p, where p is the probability of primer extension halt prior to site x.  q represents the probability that there were no previous sites of modification prior to the position at time point x.  The constant A scales the probability of extension for the signal height in the channel.  C adjusts the baseline.</p>
+<p>In sum, if the trace data follows a similar trend as modeled below, then the Signal Decay Correction tool can be used to correct the decay while retaining reactivity information. If the trace data or selected trace region does not follow the model graphed below, then unexpected results may occur when running this algorithm. The following figure is modeled with the coefficients set to q=0.999, A=1, and C=0.</p>
+<img src="../../Images/binomial.tiff">
+<p>This tool performs best after the data has been smoothed--<a href="Convolving.html">Filter Convolution</a>, <a href="FFTPanel.html">Filter-FFT</a> or <a href="Deconvolve.html">Deconvolution</a>.</p>
+<p><font size="4"><b>Using the tool</b></font></p>
+<p>The user must supply the range of the trace that will be corrected.  This can be manually entered in the <b>From</b> and <b>To</b> fields.  The user can also click with the mouse on the beginning of the trace in the <a href="../Windows/DataFileWindow.html">data view window</a> and drag to the end of the region to be corrected. This region of interest is typically the same region to be analyzed by <a href="AlignInteg.html">Align and Integrate</a>. The <b>From</b> and <b>To</b> fields will automatically show the beginning and end of the selected region. The user can also provide a scaling factor to rescale the final corrected trace.  This is necessary once the computation is complete as the adjusted values are typically less then one.  Without rescaling the corrected channel will appear to "disappear" as the other channel's scaling may be much more then 1.</p>
+<p>The section identifying the equation lists three fields corresponding to the 3 coefficients in the equation, A, q, and C.  These values are unknown, so given the data, they are approximated using the Levenberg-Marquardt non-linear least squares regression algorithm--a curve fitting algorithm.  The algorithm begins with an initial estimate of the three parameters and will eventually converge to the parameters which best fit the data.  The user is allowed to modify the initial estimates.  When the algorithm completes, the optimized values for A, q and C are displayed.  The default values are shown in the figure below.  Good initial estimates would be for A to select a high point of a peak at the beginning of the trace.  For C, choose a low peak height near the end of the trace.  For q, a good initial estimate is 0.999.</p>
+<img src="../../Images/decay.tiff">
+<p>The Signal Decay Correction tool when executed, first identifies all peaks in the selected channel.  Peak heights and position will be fed to the curve fitting algorithm to estimate the signal decay of the data.  However, since the curve that is fit to the data is easily influenced by extreme peaks, the tool determines if there are any peaks which do not follow the overall distribution of the peaks, i.e., statistical outliers.  These peaks are then removed from the set of points fed to the curve fitting algorithm.  The curve fitting algorithm is then applied.  All points in the trace are then adjusted by dividing by the equation D(x) using the optimized A, q and C coefficients.  The data is then rescaled to facilitate viewing and further analysis.</p>
+<p>Sometimes, due to peaks near the end of the trace having increased magnitude, the corrected channel will look somewhat like a lopsided smile.  By increasing the region of interest to include points into the noise peaks to the right or left of the selected correction region may correct this problem.
+<p>For more details on the algorithm see: Vasa SM, Guex N, Wilkinson KA, Weeks KM and Giddings MC, "ShapeFinder: A software system for high-throughput analysis of RNA structure", In preparation.</p>
+</font>
+
+	</td>
+	</tr>
+</table>
+</div>
+</body>
+
+</html>

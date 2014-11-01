@@ -1,0 +1,117 @@
+{
+    IBClasses = (
+        {
+            ACTIONS = {"" = id; }; 
+            CLASS = FirstResponder; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                adjustYScale = id; 
+                baseTrackButton = id; 
+                changeViewPercent = id; 
+                numViewsChanged = id; 
+                pointTrackButton = id; 
+                resetScale = id; 
+                setOwner = id; 
+            }; 
+            CLASS = MasterView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                baseNumber = id; 
+                color1 = id; 
+                color2 = id; 
+                color3 = id; 
+                color4 = id; 
+                color5 = id; 
+                color6 = id; 
+                color7 = id; 
+                color8 = id; 
+                endSelectionView = id; 
+                mouseDownView = id; 
+                myOwner = SequenceEditor; 
+                numViewsID = id; 
+                posNumber = id; 
+                rawDataMatrixID = id; 
+                scaleSlider = id; 
+                trackView = id; 
+                updateBox = id; 
+                viewSizeID = id; 
+            }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                changeLaneNumber = id; 
+                decreaseLaneNumber = id; 
+                increaseLaneNumber = id; 
+                show = id; 
+                switchRawProc = id; 
+            }; 
+            CLASS = SequenceEditor; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                laneNumID = id; 
+                multiLaneBoxID = id; 
+                myMasterView = id; 
+                numLanesID = id; 
+                printWindow = id; 
+                rawProcBoxID = id; 
+                rawProcSelectorID = id; 
+                theDistributor = id; 
+                theSequenceWindow = id; 
+                viewOptionsID = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            CLASS = SequenceView; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {masterView = id; theImage = id; }; 
+            SUPERCLASS = NSView; 
+        }, 
+        {
+            ACTIONS = {
+                cancel = id; 
+                changeColor = id; 
+                switchNormType = id; 
+                upDate = id; 
+                updateChanView = id; 
+                updateDataMark = id; 
+                updateScale = id; 
+            }; 
+            CLASS = ViewOptions; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                activeBasesID = id; 
+                backgroundColorWell = id; 
+                baseLines = NSButton; 
+                buttons = id; 
+                chanView = id; 
+                chanViewPanel = id; 
+                channelsPanel = id; 
+                colorWell1 = id; 
+                colorWell2 = id; 
+                colorWell3 = id; 
+                colorWell4 = id; 
+                colorWell5 = id; 
+                colorWell6 = id; 
+                colorWell7 = id; 
+                colorWell8 = id; 
+                dataMarkPanel = id; 
+                dataMarker = id; 
+                labels = id; 
+                labelsPanel = id; 
+                masterViewID = id; 
+                minMax1ID = id; 
+                minMax2ID = id; 
+                normTypeID = id; 
+                scalePanel = id; 
+                seqEditor = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
